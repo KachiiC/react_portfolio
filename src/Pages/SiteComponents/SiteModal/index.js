@@ -36,6 +36,12 @@ const SiteModal = () => {
               </div>
             </ModalComponent>
           )}
+          <h2>Site Modals</h2>
+          <p> It's simple, all the data is stored on the "modalData.js" file. Instead of 
+              having an individal modal for each picture, this site modal is built using
+              the useState function. When you click on an image, react will take the object 
+              that image belongs using "useState" and load that content onto the modal.
+          </p>
           <div className="site-container">
             <div className="gallery-row">
               {displayPictures}

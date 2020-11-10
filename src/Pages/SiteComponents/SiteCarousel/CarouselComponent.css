@@ -1,0 +1,16 @@
+.slide-image{
+    width: 250px;
+    height: 150px;
+    padding: 10px;
+}
+
+.image-carousel-search {
+    height: 25px;
+    width: 200px;
+}
+
+.image-carousel-button {
+    height: 30px;
+    margin: 0px 5px;
+    padding: 0px 15px;
+}

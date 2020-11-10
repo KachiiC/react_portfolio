@@ -1,4 +1,5 @@
 import React from 'react'
+import SiteCarousel from './SiteCarousel'
 // CSS
 import './sitecomponents.css'
 // Components
@@ -16,10 +17,8 @@ const SiteComponents = () => {
                     projects. I've also taken time to learn how to make my own components just 
                     in case.
                 </p>
-                <h3>Site Modals</h3>
-                <p>This is a site modal I built with useState insert the prope</p>
                 <SiteModal />
-                <h3>Site Carosel</h3>
+                <SiteCarousel />
             </div>
         </div>
     )
