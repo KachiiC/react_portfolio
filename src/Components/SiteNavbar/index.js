@@ -3,14 +3,16 @@ import React from 'react'
 import './navbar.css'
 // Data
 import navbar_menu from './navbar-menu'
-import {Link} from 'react'
+import { Link } from 'react-router-dom'
 
 const SiteNavbar = () => {
 
     const displayNav = navbar_menu.map((menu) => (
-            <a href={`/${menu.name}`}>
-                {menu.name}
-            </a>
+            <div className="nav-menu">
+                <Link to={`/${menu.path}`}>
+                    {menu.name}
+                </Link>
+            </div>
         )
     )
 
@@ -18,9 +20,11 @@ const SiteNavbar = () => {
 
         <div className="topnav" id="myTopnav">
             {displayNav}
-            <a href="#" className="icon" alt="responsive_menu"> 
-                X
-            </a>
+            <div className="icon" alt="responsive_menu"> 
+                <Link to="#">
+                    X
+                </Link>
+            </div>
         </div>
 
     )
