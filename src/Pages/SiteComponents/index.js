@@ -5,12 +5,14 @@ import './sitecomponents.css'
 import SiteComponentsIntroduction from './SiteComponentIntroduction'
 import SiteModal from './SiteModal'
 import SiteCarousel from './SiteCarousel'
+import SiteGallery from './SiteGallery'
 
 const SiteComponents = () => {
 
     const allComponents = [
         <SiteModal/>, 
-        <SiteCarousel />
+        <SiteCarousel />,
+        <SiteGallery />
     ]
 
     const displayComponents = allComponents.map((component) => (

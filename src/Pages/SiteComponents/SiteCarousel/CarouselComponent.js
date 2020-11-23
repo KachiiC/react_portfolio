@@ -13,6 +13,18 @@ const CarouselComponent = ({ images }) => {
     const slideRight = () => {
       index === images.length -3 ? setIndex(0) :setIndex(index + 1);
     };
+
+    const imageNumber = [0,1,2]
+
+    const displayImages = imageNumber.map ((imageNumber) => {
+
+        const displayIndex = index + imageNumber
+
+        return (
+            <img src={images[displayIndex]} alt={index} className="slide-image"/>
+        )
+        
+    })
   
     return (
         images.length > 0 && (
@@ -20,9 +32,7 @@ const CarouselComponent = ({ images }) => {
                 <Icon size="2x" name="angle-double-left" 
                     onClick={slideLeft} className="toggle-button"
                 />
-                    <img src={images[index]} alt={index} className="slide-image"/>
-                    <img src={images[index+1]} alt={index} className="slide-image" />
-                    <img src={images[index+2]} alt={index} className="slide-image"/>
+                {displayImages}
                 <Icon size="2x" name="angle-double-right" 
                     onClick={slideRight} className="toggle-button"/>
             </div>

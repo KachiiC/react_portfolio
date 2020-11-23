@@ -1,10 +1,8 @@
-import React,{useEffect, useState} from 'react'
-// CSS
-import './CarouselComponent.css'
-// Components
-import CarouselComponent from './CarouselComponent';
+import React,{useState, useEffect} from 'react'
+// Component
+import CarouselComponent from '../SiteCarousel/CarouselComponent'
 
-const DisplayCarousel = () => {
+const GalleryComponent = () => {
 
     const [query, setQuery] = useState(""); 
     const [images, setImages] = useState([]); 
@@ -26,6 +24,7 @@ const DisplayCarousel = () => {
         .catch(err => console.log(err))
     },[query])
 
+
     return (
         <div>
             <form onSubmit={handleSubmit} className="carousel-form">
@@ -38,9 +37,8 @@ const DisplayCarousel = () => {
                     className="image-carousel-search-button"
                 />
             </form>
-            <CarouselComponent images={images} />
         </div>
     )
 }
 
-export default DisplayCarousel
+export default GalleryComponent
