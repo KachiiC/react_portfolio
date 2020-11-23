@@ -4,12 +4,27 @@
     padding: 10px;
 }
 
+.carousel-container {
+    margin: 25px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.toggle-button{
+    margin: auto;
+}
+
+.carousel-form {
+    margin: 40px  20px 0px;
+}
+
 .image-carousel-search {
     height: 25px;
     width: 200px;
+    margin: auto;
 }
 
-.image-carousel-button {
+.image-carousel-search-button {
     height: 30px;
     margin: 0px 5px;
     padding: 0px 15px;

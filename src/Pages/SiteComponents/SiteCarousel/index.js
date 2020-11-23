@@ -1,41 +1,17 @@
-import React,{useEffect, useState} from 'react'
-// CSS
-import './CarouselComponent.css'
+import React from 'react'
 // Components
-import CarouselComponent from './CarouselComponent';
+import DisplayCarousel from './DisplayCarousel'
 
 const SiteCarousel = () => {
 
-    const [query, setQuery] = useState(""); 
-    const [images, setImages] = useState([]); 
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-    };
-
-    useEffect(() => {
-        fetch(
-            `https://pixabay.com/api/?key=18866569-6f34f2906812f25069d16a3da&q=${query}`
-          ).then((response) => response.json())
-        .then(({ hits }) => hits.map(({ webformatURL }) => webformatURL)) 
-        .then(setImages)
-        .catch(err => console.log(err))
-    },[query])
-
     return (
-        <div>
-            <h2>Image Carousel</h2>
-            <p>An Image Carousel made with react</p>
-            <form onSubmit={handleSubmit}>
-                <input type="text" 
-                    className="image-carousel-search" 
-                    onChange={(e) => setQuery(e.target.value)} 
-                />
-                <input type="submit" value="Search" className="image-carousel-button"/>
-            </form>
-            <CarouselComponent images={images} />
+        <div className="component-item">
+        <h1>React Carousel</h1>
+        <p>A simple image carousel built with React. Simply search a word to get start!</p>
+        <DisplayCarousel />
+        <h4>So how does it work?</h4>
+        <p>The pictures are from an API</p>
         </div>
-
     )
 }
 

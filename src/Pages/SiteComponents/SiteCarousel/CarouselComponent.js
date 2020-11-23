@@ -1,26 +1,22 @@
 import React,{useState} from 'react'
+// Components
 import Icon from 'react-fa'
 
 const CarouselComponent = ({ images }) => {
 
     const [index, setIndex] = useState(0); 
   
-    const slideRight = () => {
-      setIndex((index + 1) % images.length);
-    };
-  
     const slideLeft = () => {
-      const nextIndex = index - 1;
-      if (nextIndex < 0) {
-        setIndex(images.length - 1); 
-      } else {
-        setIndex(nextIndex);
-      }
+      index === 0 ? setIndex(images.length - 3): setIndex(index - 1);
+    };
+
+    const slideRight = () => {
+      index === images.length -3 ? setIndex(0) :setIndex(index + 1);
     };
   
     return (
         images.length > 0 && (
-            <div>
+            <div className="carousel-container">
                 <Icon size="2x" name="angle-double-left" 
                     onClick={slideLeft} className="toggle-button"
                 />

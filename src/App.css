@@ -1,4 +1,10 @@
 main {
   text-align: center;
-  padding: 0px 80px;
+  padding: 30px 80px;
+}
+
+.component-item {
+  width: 850px;
+  /* border: 1px black solid; */
+  margin: auto;
 }

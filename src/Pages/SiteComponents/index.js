@@ -18,6 +18,7 @@ const SiteComponents = () => {
                     in case.
                 </p>
                 <SiteModal />
+                <hr className ="component-separator"/>
                 <SiteCarousel />
             </div>
         </div>

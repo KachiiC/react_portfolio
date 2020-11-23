@@ -1,33 +1,58 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 // CSS
-import './navbar.css'
-// Data
+import "./navbar.css";
+import { CSSTransition } from "react-transition-group";
 import navbar_menu from './navbar-menu'
 import { Link } from 'react-router-dom'
 
-const SiteNavbar = () => {
+const Header = () => {
+    
+    const [isNavVisible, setNavVisibility] = useState(false);
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
 
-    const displayNav = navbar_menu.map((menu) => (
-            <div className="nav-menu">
-                <Link to={`/${menu.path}`}>
-                    {menu.name}
-                </Link>
-            </div>
-        )
-    )
+    useEffect(() => {
+        const mediaQuery = window.matchMedia("(max-width: 700px)");
+        mediaQuery.addListener(handleMediaQueryChange);
+        handleMediaQueryChange(mediaQuery);
 
-    return (
+        return () => {
+        mediaQuery.removeListener(handleMediaQueryChange);
+        };
+    }, []);
 
-        <div className="topnav" id="myTopnav">
+    const handleMediaQueryChange = mediaQuery => 
+        mediaQuery.matches? setIsSmallScreen(true) : setIsSmallScreen(false); 
+
+  const toggleNav = () => {
+    setNavVisibility(!isNavVisible);
+  };
+
+  const displayNav = navbar_menu.map((menu) => (
+    <div className="nav-menu">
+        <Link to={`/${menu.path}`} className="nav-links">
+            {menu.name}
+        </Link>
+    </div>
+)
+)
+
+  return (
+    <header className="Header">
+      <CSSTransition
+        in={!isSmallScreen || isNavVisible}
+        timeout={350}
+        classNames="NavAnimation"
+        unmountOnExit
+      >
+        <nav className="Nav">
             {displayNav}
-            <div className="icon" alt="responsive_menu"> 
-                <Link to="#">
-                    X
-                </Link>
-            </div>
-        </div>
-
-    )
+        </nav>
+      </CSSTransition>
+      <button onClick={toggleNav} className="Burger">
+        X
+      </button>
+    </header>
+  )
 }
 
-export default SiteNavbar
+export default Header
