@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 // CSS
 import './ModalComponent.css'
 // Data
-import modalData from './modalData'
+import modalData from './ModalData'
 import ModalComponent from './ModalComponent';
 
 const DisplayModal = () => {
@@ -11,6 +11,7 @@ const DisplayModal = () => {
     const [result, setResult] = useState([])
       
     const displayPictures = modalData.map((item) => {
+      
       const rename = () =>  setResult(item) 
       const changeVisibility = () => setShowModal(true)
       
@@ -18,7 +19,7 @@ const DisplayModal = () => {
               <div className="gallery-item">
                 <img src={item.url} 
                     alt="modal-click"
-                    onClick={() => {changeVisibility();rename()}} 
+                    onClick={() => {rename(); changeVisibility()}} 
                 />
               </div>
         )

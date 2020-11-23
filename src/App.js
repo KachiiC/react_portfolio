@@ -5,6 +5,7 @@ import navbar_menu from "Components/SiteNavbar/navbar-menu";
 // Router
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import SiteNavbar from "Components/SiteNavbar";
+import PageContainer from 'Components/PageContainer'
 // Page Data
 import Home from 'Pages/Home'
 
@@ -19,14 +20,14 @@ const App = () => {
   return (
       <Router>
         <SiteNavbar />
-        <main>
+        <PageContainer>
           <Switch>
             {displayPageList}
             <Route path="/">
               <Home />
             </Route>
           </Switch>
-        </main>
+        </PageContainer>
       </Router>
   );
 }
