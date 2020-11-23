@@ -27,14 +27,20 @@ const Header = () => {
     setNavVisibility(!isNavVisible);
   };
 
-  const displayNav = navbar_menu.map((menu) => (
-    <div className="nav-menu">
+  const displayNav = navbar_menu.map((menu) => {
+
+    const displayName = menu.path.split("-").map((letter) => {
+      return letter.toUpperCase()
+    }).join(" ")
+
+    return (
+      <div className="nav-menu">
         <Link to={`/${menu.path}`} className="nav-links">
-            {menu.name}
+            {displayName}
         </Link>
-    </div>
-)
-)
+      </div>
+    )
+  })
 
   return (
     <header className="Header">
