@@ -3,21 +3,24 @@ import React from 'react'
 import CardComponent from './CardComponent'
 // CSS
 import './CardComponent.css'
+// Data
+import CardData from 'Data/SiteComponents/CardData'
 
 const DisplayCard = () => {
 
+    const renderCardList = CardData.map((card) => (
+        
+        <CardComponent 
+            title={card.title}
+            description={card.description}
+            image={card.image}
+        />
+
+    ))
+
     return (
         <div className="display-card-container">
-            <CardComponent 
-                image_text="Card 2"
-                title="card 1"
-                description="This is the second"
-            />
-            <CardComponent 
-                image_text="Card 1"
-                title="card 1"
-                description="description 1"
-            />
+            {renderCardList}
         </div>
     )
     

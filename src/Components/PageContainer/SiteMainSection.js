@@ -1,13 +1,12 @@
 import React from 'react'
 
-const SiteMainSection = (props) => {
+const SiteMainSection = (props) => (
 
-    return (
-        <div className="main-section">
-            {props.children}
-        </div>
-    )
+    <div className="main-section">
+        {props.children}
+    </div>
     
-}
+)
+    
 
 export default SiteMainSection

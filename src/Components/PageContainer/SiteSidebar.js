@@ -1,6 +1,5 @@
 import React from 'react'
-// CSS
-import './PageContainer.css'
+
 
 const SiteSidebar = () => {
 

@@ -8,10 +8,10 @@ const SiteCard = () => {
     return (
             <ComponentContainer
                 title="React Cards"
-                introduction="React Cards intro"
+                introduction="A simple card component built with react"
                 component={<DisplayCard />}
             >    
-                <p>React card descriptions</p>
+            React card descriptions
             </ComponentContainer>
     )
 
