@@ -1,0 +1,22 @@
+.display-card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-component-container {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    width: 356px;
+    margin: auto;
+}
+
+
+.card-component-image {
+    border-radius: 5px 5px 0 0;
+    width:356px;
+    height: 200px;
+}
+
+.card-description-container {
+    padding: 2px 16px;
+}

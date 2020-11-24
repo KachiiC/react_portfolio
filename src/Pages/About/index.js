@@ -6,7 +6,7 @@ const About = () => {
         <div>
             <h1>About</h1>
             <p>
-                This app is a collection of my react projects.
+                This app is a collection of my react projects. 
             </p>
         </div>
     )

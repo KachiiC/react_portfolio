@@ -6,11 +6,13 @@ import SiteComponentsIntroduction from './SiteComponentIntroduction'
 import SiteModal from './SiteModal'
 import SiteCarousel from './SiteCarousel'
 import SiteGallery from './SiteGallery'
+import SiteCard from './SiteCard'
 
 const SiteComponents = () => {
 
     const allComponents = [
-        <SiteModal/>, 
+        <SiteCard />,
+        <SiteModal />, 
         <SiteCarousel />,
         <SiteGallery />
     ]
