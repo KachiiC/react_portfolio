@@ -1,0 +1,32 @@
+.gallery-slide {
+    width: 200px;
+    height: 113px;
+    margin: 0px 10px;
+}
+
+.gallery-container {
+    margin: 25px 0px;
+}
+
+.current-image {
+    width: 640px;
+    height: 425px;
+}
+
+.full-screen-image-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.full-screen-image{
+    margin: 130px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.close-full-screen{
+    color: white;
+    cursor: pointer;
+    margin: 0px 15px;
+}

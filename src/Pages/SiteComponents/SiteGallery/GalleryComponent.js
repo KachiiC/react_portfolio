@@ -1,44 +1,76 @@
-import React,{useState, useEffect} from 'react'
+import React, {useState} from 'react'
 // Component
-import CarouselComponent from '../SiteCarousel/CarouselComponent'
+import Icon from 'react-fa'
+import DisplayImage from './DisplayImage';
+// Icons
 
-const GalleryComponent = () => {
+const GalleryComponent = ({images}) => {
 
-    const [query, setQuery] = useState(""); 
-    const [images, setImages] = useState([]); 
+    const [imageIndex, setImageIndex] = useState(1);
+    const [selectedIndex, setSelectedIndex] = useState(0)
+    const [fullImage, setFullImage] = useState("")
+    const [fullScreen, setFullScreen] = useState(false)
+  
+    const slideLeft = () => {
+        imageIndex === 0 ? setImageIndex(images.length - 3): setImageIndex(imageIndex - 1);
+    }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-    };
+    const slideRight = () => {
+        imageIndex === images.length - 3 ? setImageIndex(0) : setImageIndex(imageIndex + 1);
+    }
+    
+    const viewImage = () => {
+        setFullImage(images[selectedIndex])
+        setFullScreen(true)
+    }
 
-    useEffect(() => {
-        fetch(
-            `https://pixabay.com/api/?key=18866569-6f34f2906812f25069d16a3da&q=${query}`
-          ).then((response) => response.json())
-        .then(
-            ({ hits }) => hits.map(({ webformatURL }) => webformatURL)
-        ) 
-        .then(
-            setImages 
+    const imageNumber = [0, 1, 2]
+
+    const displayImages = imageNumber.map ((imageNumber) => {
+
+        const displayIndex = imageIndex + imageNumber
+
+        return (
+            <img src={images[displayIndex]} 
+                alt={imageIndex} 
+                className="gallery-slide"
+                onClick={() => setSelectedIndex(displayIndex) }
+            />
         )
-        .catch(err => console.log(err))
-    },[query])
-
-
+        
+    })
+  
     return (
-        <div>
-            <form onSubmit={handleSubmit} className="carousel-form">
-                <input type="text" 
-                    className="image-carousel-search" 
-                    onChange={(e) => setQuery(e.target.value)} 
+        <>
+            { fullScreen && (
+                <DisplayImage selection={fullImage} 
+                    closeImage={() => setFullScreen(false)}
                 />
-                <input type="submit" 
-                    value="Search" 
-                    className="image-carousel-search-button"
+            )}
+            <div className="gallery-container">
+                <img src={images[selectedIndex]} 
+                    alt="selected" 
+                    className="current-image"
+                    onClick={viewImage}
                 />
-            </form>
-        </div>
+                <div className="carousel-container">
+                    <Icon size="2x" 
+                        name="angle-double-left" 
+                        onClick={slideLeft} 
+                        className="toggle-button"
+                    />
+                    {displayImages}
+                    <Icon size="2x" 
+                        name="angle-double-right" 
+                        onClick={slideRight} 
+                        className="toggle-button"
+                    />
+                </div>
+            </div>
+        </>
     )
-}
+    
+};
+   
 
 export default GalleryComponent
