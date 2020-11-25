@@ -1,11 +1,15 @@
 import React from 'react'
+// CSS
+import './API.css'
+// Components
+import ApiIntoduction from './ApiIntrodcution'
 
-const Api = () => {
+const Api = () =>  (
+    <div>
+        <ApiIntoduction />
+    </div>
+)
 
-    return (
-        <h1>API</h1>
-    )
 
-}
 
 export default Api
