@@ -1,4 +1,6 @@
 import React from 'react'
+// CSS
+import './CardComponent.css'
 // Component
 import DisplayCard from './DisplayCard'
 import ComponentContainer from 'Components/ComponentContainer'

@@ -1,6 +1,4 @@
 import React from 'react'
-// CSS
-import './CardComponent.css'
 
 const CardComponent = (props) => {
 
@@ -11,7 +9,7 @@ const CardComponent = (props) => {
                 alt="Avatar" 
             />
             <div className="card-description-container">
-                <h4><b>{props.title}</b></h4> 
+                <h4>{props.title}</h4> 
                 {props.description}
             </div>
         </div>

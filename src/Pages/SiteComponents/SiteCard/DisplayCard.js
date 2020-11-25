@@ -1,8 +1,6 @@
 import React from 'react'
 // Component
 import CardComponent from './CardComponent'
-// CSS
-import './CardComponent.css'
 // Data
 import CardData from 'Data/SiteComponents/CardData'
 
