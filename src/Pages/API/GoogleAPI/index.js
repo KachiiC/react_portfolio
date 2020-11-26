@@ -1,4 +1,5 @@
 import React from 'react'
+import YoutubePlaylist from './YoutubePlaylist'
 
 const GoogleAPI = () => {
 
@@ -6,6 +7,7 @@ const GoogleAPI = () => {
         <div>
             <h2>Google API</h2>
             <p>Google API projects</p>
+            <YoutubePlaylist />
         </div>
     )
 }
