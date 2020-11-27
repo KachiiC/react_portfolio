@@ -1,12 +1,14 @@
 import React from 'react'
+// Components
+import GoogleAPIIntroduction from './GoogleAPIIntroduction'
 import YoutubePlaylist from './YoutubePlaylist'
 
 const GoogleAPI = () => {
 
     return (
         <div>
-            <h2>Google API</h2>
-            <p>Google API projects</p>
+            <h1>Google API</h1>
+            <GoogleAPIIntroduction />
             <YoutubePlaylist />
         </div>
     )

@@ -1,6 +1,6 @@
 .slide-image{
-    width: 250px;
-    height: 150px;
+    width: 200px;
+    height: 113px;
     padding: 10px;
 }
 
@@ -12,6 +12,7 @@
 
 .toggle-button{
     margin: auto;
+    cursor: pointer;
 }
 
 .carousel-form {

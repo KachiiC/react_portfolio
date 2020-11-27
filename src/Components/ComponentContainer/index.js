@@ -5,7 +5,7 @@ import './ComponentContainer.css'
 const ComponentContainer = (props) => (
 
     <div className="component-item">
-        <h1>{props.title}</h1>
+        <h2>{props.title}</h2>
         <p>{props.introduction}
         </p>
         {props.component}

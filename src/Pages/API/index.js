@@ -8,7 +8,6 @@ import RapidAPI from './RapidAPI'
 import DjangoRFW from './DjangoRFW'
 
 const Api = () =>  (
-
     <div>
         <ApiIntoduction />
         <GoogleAPI />
