@@ -29,14 +29,14 @@ const Header = () => {
     setNavVisibility(!isNavVisible);
   };
 
-  const displayNav = NavbarData.map((menu) => {
+  const displayNav = NavbarData.map((menu, index) => {
 
     const displayName = menu.path.split("-").map((letter) => {
       return letter.toUpperCase()
     }).join(" ")
 
     return (
-      <div className="nav-menu">
+      <div className="nav-menu" key={index}>
         <Link to={`/${menu.path}`} className="nav-links">
             {displayName}
         </Link>

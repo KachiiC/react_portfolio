@@ -10,13 +10,13 @@ const DisplayModal = () => {
     const [showModal, setShowModal] = useState(false);
     const [result, setResult] = useState([])
       
-    const displayPictures = modalData.map((item) => {
+    const displayPictures = modalData.map((item, index) => {
       
       const rename = () =>  setResult(item) 
       const changeVisibility = () => setShowModal(true)
       
         return (
-              <div className="gallery-item">
+              <div className="gallery-item" key={index}>
                 <img src={item.url} 
                     alt="modal-click"
                     onClick={() => {rename(); changeVisibility()}} 

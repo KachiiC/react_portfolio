@@ -5,10 +5,10 @@ const SiteSidebar = () => {
 
     const project_items = ["Site Modal", "Site Carousel"]
 
-    const displayProjects = project_items.map((project) => {
+    const displayProjects = project_items.map((project, index) => {
 
         return (
-            <div className="site-project-item">    
+            <div className="site-project-item" key={index}>    
                 <img src="http://via.placeholder.com/178x100.png?text=Me" 
                     className="site-project-pic" 
                     alt="profile" 

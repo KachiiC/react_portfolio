@@ -17,11 +17,11 @@ const SiteComponents = () => {
         <SiteGallery />
     ]
 
-    const displayComponents = allComponents.map((component) => (
-        <>
+    const displayComponents = allComponents.map((component, index) => (
+        <div key={index}>
             <hr className="component-separator"/>
             {component}
-        </>
+        </div>
     ))
     
     return (

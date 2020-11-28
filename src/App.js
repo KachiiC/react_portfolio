@@ -12,8 +12,8 @@ import PageContainer from 'Components/PageContainer'
 
 const App = () => {
 
-  const displayPageList = NavbarData.map((single_menu) => (
-    <Route path={`/${single_menu.path}`}>
+  const displayPageList = NavbarData.map((single_menu, index) => (
+    <Route path={`/${single_menu.path}`} key={index}>
       {single_menu.page}
     </Route>
   ))

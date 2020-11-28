@@ -6,12 +6,13 @@ import CardData from 'Data/SiteComponents/CardData'
 
 const DisplayCard = () => {
 
-    const renderCardList = CardData.map((card) => (
+    const renderCardList = CardData.map((card, index) => (
         
         <CardComponent 
             title={card.title}
             description={card.description}
             image={card.image}
+            key={index}
         />
 
     ))

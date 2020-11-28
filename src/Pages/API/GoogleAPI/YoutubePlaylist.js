@@ -28,11 +28,15 @@ const YoutubePlaylist = () => {
     },[playlist_url, results_number])
 
     return (
-        <div>
+        <div className="">
             <ComponentContainer
                 title="Youtube Api"
                 introduction="introduction"
-                component={<CarouselComponent images={youtubeItems} />}
+                component={
+                    <div className="youtube-container">
+                        <CarouselComponent images={youtubeItems} />
+                    </div>
+                }
             >
                 description
             </ComponentContainer>

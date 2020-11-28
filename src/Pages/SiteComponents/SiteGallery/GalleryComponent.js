@@ -26,18 +26,18 @@ const GalleryComponent = ({images}) => {
 
     const imageNumber = [0, 1, 2]
 
-    const displayImages = imageNumber.map ((imageNumber) => {
+    const displayImages = imageNumber.map ((imageNumber, index) => {
 
         const displayIndex = imageIndex + imageNumber
 
         return (
-            <img src={images[displayIndex]} 
+            <img src={images[displayIndex]}
+                key={index} 
                 alt={imageIndex} 
                 className="gallery-slide"
                 onClick={() => setSelectedIndex(displayIndex) }
             />
         )
-        
     })
   
     return (
