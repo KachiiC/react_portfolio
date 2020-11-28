@@ -1,8 +1,8 @@
 import React from 'react'
 // Components
 import GoogleAPIIntroduction from './GoogleAPIIntroduction'
-import YoutubePlaylist from './YoutubePlaylist'
-// import YoutubePlaylistOffline from './YoutubePlaylistOffline'
+// import YoutubePlaylist from './YoutubePlaylist'
+import YoutubePlaylistOffline from './YoutubePlaylistOffline'
 
 const GoogleAPI = () => {
 
@@ -10,8 +10,8 @@ const GoogleAPI = () => {
         <div>
             <h1>Google API</h1>
             <GoogleAPIIntroduction />
-            <YoutubePlaylist />
-            {/* <YoutubePlaylistOffline /> */}
+            {/* <YoutubePlaylist /> */}
+            <YoutubePlaylistOffline />
         </div>
     )
 }

@@ -26,3 +26,7 @@
     overflow: hidden;
 }
 
+.card-description-content {
+    text-align: left;
+    padding: 0px 15px;
+}

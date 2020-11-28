@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 // CSS
 import './ModalComponent.css'
 // Data
-import modalData from './ModalData'
+import modalData from 'Data/SiteComponents/ModalData'
 import ModalComponent from './ModalComponent';
 
 const DisplayModal = () => {

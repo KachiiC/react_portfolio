@@ -1,5 +1,5 @@
 const YoutubePlaylist = [
-      {
+  {
         "kind": "youtube#playlistItem",
         "etag": "Yw-R96v_GKFc07GWE7-A2_BKmZo",
         "id": "UExhYUVlRnRObElKMllpZ3k0d0hDUWxjdVJaZzROS2JpNS40QTA3NTU2RkM1QzlCMzYx",
@@ -808,7 +808,6 @@ const YoutubePlaylist = [
             "videoId": "AP3xBXHTSEk"
           }
         }
-      }
-]
+}]
 
 export default YoutubePlaylist

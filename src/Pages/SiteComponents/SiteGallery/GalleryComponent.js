@@ -6,7 +6,7 @@ import DisplayImage from './DisplayImage';
 
 const GalleryComponent = ({images}) => {
 
-    const [imageIndex, setImageIndex] = useState(1);
+    const [imageIndex, setImageIndex] = useState(0);
     const [selectedIndex, setSelectedIndex] = useState(0)
     const [fullImage, setFullImage] = useState("")
     const [fullScreen, setFullScreen] = useState(false)

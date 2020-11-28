@@ -30,12 +30,12 @@ const DisplayGallery = () => {
             <form onSubmit={handleSubmit}>
                 <input 
                     type="text"
-                    className="input-form" 
+                    className="image-carousel-search" 
                     onChange={(e) => setQuery(e.target.value)} />
                 <input 
                     type="submit" 
                     value="Search"
-                    className="search-button"
+                    className="image-carousel-search-button"
                 />
             </form>
             <GalleryComponent images={images} />

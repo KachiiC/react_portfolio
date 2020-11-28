@@ -10,7 +10,7 @@ const CardComponent = (props) => {
             />
             <div className="card-description-container">
                 <h4>{props.title}</h4> 
-                {props.description}
+                <div className="card-description-content">{props.description}</div>
             </div>
         </div>
     )

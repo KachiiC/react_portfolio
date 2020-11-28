@@ -6,7 +6,8 @@ import YoutubePlaylistData from 'Data/API/YoutubePlaylistData'
 
 const YoutubePlaylist = () => {
 
-    const youtubeItems = YoutubePlaylistData
+
+    const youtubeItems = YoutubePlaylistData.map(item => item.snippet.thumbnails.maxres.url)
 
     return (
         <div>
