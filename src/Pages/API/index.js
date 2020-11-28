@@ -10,7 +10,9 @@ import DjangoRFW from './DjangoRFW'
 const Api = () =>  (
     <div>
         <ApiIntoduction />
+        <hr className="component-separator"/>
         <GoogleAPI />
+        <hr className="component-separator"/>
         <RapidAPI />
         <DjangoRFW />
     </div>

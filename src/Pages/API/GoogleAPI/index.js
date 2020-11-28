@@ -2,7 +2,7 @@ import React from 'react'
 // Components
 import GoogleAPIIntroduction from './GoogleAPIIntroduction'
 // import YoutubePlaylist from './YoutubePlaylist'
-import YoutubePlaylistOffline from './YoutubePlaylistOffline'
+import YoutubePlaylistOffline from './YoutubePlaylist/YoutubePlaylistOffline'
 
 const GoogleAPI = () => {
 

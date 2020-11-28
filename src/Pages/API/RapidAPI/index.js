@@ -4,7 +4,7 @@ const RapidAPI = () => {
 
     return (
         <div>
-            <h2>Rapid API</h2>
+            <h1>Rapid API</h1>
             <p>Rapid API projects</p>
         </div>
     )
