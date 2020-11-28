@@ -7,16 +7,29 @@ import GoogleAPI from './GoogleAPI'
 import RapidAPI from './RapidAPI'
 import DjangoRFW from './DjangoRFW'
 
-const Api = () =>  (
-    <div>
-        <ApiIntoduction />
-        <hr className="component-separator"/>
-        <GoogleAPI />
-        <hr className="component-separator"/>
-        <RapidAPI />
+const Api = () =>  {
+    
+    const allComponents = [
+        <GoogleAPI />,
+        <RapidAPI />,
         <DjangoRFW />
-    </div>
-)
+    ]
+
+    const displayComponents = allComponents.map((component, index) => (
+        <div key={index}>
+            <hr className="component-separator"/>
+            {component}
+        </div>
+    ))
+
+    return (
+
+        <div>
+            <ApiIntoduction />
+            {displayComponents}
+        </div>
+    )
+}
 
 
 
