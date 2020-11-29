@@ -1,36 +1,29 @@
 import React from 'react'
 // CSS
 import './API.css'
+import MainContentContainer from 'Components/MainContentContainer'
 // Components
-import ApiIntoduction from './ApiIntrodcution'
+import ApiIntroduction from './ApiIntroduction'
 import GoogleAPI from './GoogleAPI'
 import RapidAPI from './RapidAPI'
 import DjangoRFW from './DjangoRFW'
 
-const Api = () =>  {
+const API = () =>  {
     
-    const allComponents = [
+    const componentsList = [
         <GoogleAPI />,
         <RapidAPI />,
         <DjangoRFW />
     ]
 
-    const displayComponents = allComponents.map((component, index) => (
-        <div key={index}>
-            <hr className="component-separator"/>
-            {component}
-        </div>
-    ))
-
     return (
-
-        <div>
-            <ApiIntoduction />
-            {displayComponents}
-        </div>
+        <MainContentContainer 
+            introduction={<ApiIntroduction />}
+            components={componentsList}
+        />
     )
 }
 
 
 
-export default Api
+export default API

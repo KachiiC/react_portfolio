@@ -16,17 +16,18 @@ const CarouselComponent = ({ images }) => {
 
     const imageNumber = [0,1,2]
 
+
     const displayImages = imageNumber.map ((imageNumber) => {
 
         const displayIndex = index + imageNumber
 
         return (
-            <img src={images[displayIndex]} 
-                alt={index}
-                key={displayIndex}
-                className="slide-image"/>
-        )
-        
+                <img src={images[displayIndex]} 
+                    alt={index}
+                    key={displayIndex}
+                    className="slide-image"
+                />
+        )  
     })
   
     return (

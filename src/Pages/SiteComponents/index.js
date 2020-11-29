@@ -1,35 +1,28 @@
 import React from 'react'
 // CSS
-import './sitecomponents.css'
+import './SiteComponents.css'
+import MainContentContainer from 'Components/MainContentContainer'
 // Components
 import SiteComponentsIntroduction from './SiteComponentIntroduction'
+import SiteCard from './SiteCard'
 import SiteModal from './SiteModal'
 import SiteCarousel from './SiteCarousel'
 import SiteGallery from './SiteGallery'
-import SiteCard from './SiteCard'
 
 const SiteComponents = () => {
 
-    const allComponents = [
-        <SiteCard />,
+    const componentsList = [
+        <SiteCard />, 
         <SiteModal />, 
         <SiteCarousel />,
         <SiteGallery />
     ]
-
-    const displayComponents = allComponents.map((component, index) => (
-        <div key={index}>
-            <hr className="component-separator"/>
-            {component}
-        </div>
-    ))
     
     return (
-        <div>
-            <SiteComponentsIntroduction />
-            {displayComponents}
-        </div>
-
+        <MainContentContainer
+            introduction={<SiteComponentsIntroduction />}
+            components={componentsList}
+        />
     )
 }
 

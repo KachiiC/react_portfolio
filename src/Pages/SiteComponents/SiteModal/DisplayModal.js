@@ -33,7 +33,7 @@ const DisplayModal = () => {
             <ModalComponent closeModal={() => setShowModal(false)}>
               <div className="modal-content">
                 <h3>{result.modal_title}</h3>
-                <p>{result.modal_content}</p>
+                {result.modal_content}
               </div>
             </ModalComponent>
           )}
