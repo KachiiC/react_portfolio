@@ -5,14 +5,14 @@ import DisplayCarousel from './DisplayCarousel'
 import ComponentContainer from 'Components/ComponentContainer'
 
 const SiteCarousel = () => (
-    
+    <div id="carousel">
         <ComponentContainer
             title="React Carousel"
             component={<DisplayCarousel />}
             introduction="A simple image carousel built with React and 'Pixabay' 
             api. Simply search a word and use the toggle buttons to see the different 
             results of your search!"
-        >
+            >
             "Pixabay"is an API which returns images based on your query. When the search
             input is submited, state saves the searched word as "query". Each time the query
             changes, the useEffect is activated and a fetch request is made. Each request
@@ -22,6 +22,7 @@ const SiteCarousel = () => (
             a condition ternary is used if the index falls outside of the length of the array.
 
         </ComponentContainer>
+    </div>
 )
 
 

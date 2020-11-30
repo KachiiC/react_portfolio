@@ -2,7 +2,7 @@ import React from 'react'
 // CSS
 import './YoutubePlaylist.css'
 // Compontents
-import {Link} from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link'
 import ComponentContainer from 'Components/ComponentContainer'
 import CarouselComponent from 'Pages/SiteComponents/SiteCarousel/CarouselComponent'
 import YoutubePlaylistData from 'Data/API/YoutubePlaylistData'
@@ -10,9 +10,6 @@ import YoutubePlaylistData from 'Data/API/YoutubePlaylistData'
 const YoutubePlaylist = () => {
 
     const youtubeItems = YoutubePlaylistData.map(item => item.snippet.thumbnails.maxres.url)
-    const youtubeLinks = YoutubePlaylistData.map(item => item.snippet.resourceId.video_id)
-
-    console.log(youtubeLinks)
 
     return (
             <ComponentContainer
@@ -24,13 +21,14 @@ const YoutubePlaylist = () => {
                     <div className="youtube-carousel">
                         <CarouselComponent 
                             images={youtubeItems} 
-                            links={youtubeLinks}
                         />
                     </div>
                 }
             >
-                Once the call is made, I've taken the thumbnail from each picture and placed it
-                in the <Link to="site-components#carousel">react carousel.</Link>
+                The GET request to the Youtube API returns each item in a playlist as an array of 
+                objects (one for each video in the playlist). A map function is then used to 
+                return the thumbnail from each video in that chosen playlist and placed then
+                we can place in the <a href="/site-components#carousel">react carousel.</a>
             </ComponentContainer>
     )
 

@@ -12,10 +12,10 @@ import SiteGallery from './SiteGallery'
 const SiteComponents = () => {
 
     const componentsList = [
-        <SiteCard id="card"/>, 
-        <SiteModal id="modal"/>, 
-        <SiteCarousel id="carousel"/>,
-        <SiteGallery id="gallery"/>
+        <SiteCard />, 
+        <SiteModal />, 
+        <SiteCarousel />,
+        <SiteGallery />
     ]
     
     return (

@@ -1,4 +1,5 @@
 import React from 'react'
+import Imdb from './Imdb'
 
 const RapidAPI = () => {
 
@@ -6,7 +7,7 @@ const RapidAPI = () => {
         
         <div>
             <h1>Rapid API</h1>
-            <p>Rapid API projects</p>
+            <Imdb />
         </div>
     )
 
