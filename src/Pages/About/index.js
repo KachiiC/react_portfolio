@@ -1,6 +1,8 @@
 import React from 'react'
 
 const About = () => {
+
+    console.log(Date())
     
     return (
         <div>

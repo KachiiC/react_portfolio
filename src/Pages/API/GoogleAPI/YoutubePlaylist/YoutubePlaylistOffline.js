@@ -2,7 +2,6 @@ import React from 'react'
 // CSS
 import './YoutubePlaylist.css'
 // Compontents
-import { HashLink as Link } from 'react-router-hash-link'
 import ComponentContainer from 'Components/ComponentContainer'
 import CarouselComponent from 'Pages/SiteComponents/SiteCarousel/CarouselComponent'
 import YoutubePlaylistData from 'Data/API/YoutubePlaylistData'

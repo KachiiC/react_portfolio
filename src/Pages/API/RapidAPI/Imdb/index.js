@@ -5,9 +5,10 @@ import './Imdb.css'
 import ImdbCard from './ImdbCard'
 
 const Imdb = () =>  (
+    <div className="rapid-api-component">
 
         <ImdbCard />
-
+    </div>
 )
 
 export default Imdb
