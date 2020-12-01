@@ -1,0 +1,77 @@
+.weather-modal-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.weather-api-description p{
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.weather-api-description {
+    width: 445px;
+    border-right: 1px solid black;
+    text-align: center;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.weather-api-component {
+    width: 50%;
+    margin: auto;
+    padding: 0px 20px;
+    border-right: 1px solid black;
+    text-align: center;
+}
+
+.what-is-weather-text{
+    font-size: 20px;
+    text-align: center;
+}
+
+.weather-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 500px;
+}
+
+.city-search {
+    width: 200px;
+    height: 30px;
+    padding: 0px 10px;
+}
+
+.weather-forecast-results{
+    text-align: center;
+}
+
+.temprature-card-container {
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    max-width: 150px;
+    margin: 25px auto;
+    overflow: hidden;
+}
+
+.temprature-card-image {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 5px 5px 0 0;
+    width: 150px;
+    height: 100px;
+}
+
+.temprature-card-description-container {
+    max-width: 150px;
+    max-height: 140px;
+    min-height: 150px;
+    overflow: hidden;
+}
+
+.temprature-card-description-content {
+    text-align: center;
+}
