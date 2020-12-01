@@ -4,32 +4,26 @@
     margin: auto;
 }
 
-.weather-api-description p{
-    white-space: nowrap; 
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.weather-api-description {
+.weather-api-description{
     width: 445px;
-    border-right: 1px solid black;
-    text-align: center;
-    white-space: nowrap; 
-    overflow: hidden;
-    text-overflow: ellipsis;
+    word-wrap: break-word;
 }
 
 .weather-api-component {
     width: 50%;
-    margin: auto;
+    margin: 0px auto;
     padding: 0px 20px;
-    border-right: 1px solid black;
-    text-align: center;
+}
+
+.weather-api-explanation {
+    padding: 10px 20px;
+    text-align: left;
 }
 
 .what-is-weather-text{
     font-size: 20px;
     text-align: center;
+    padding: 20px 0px 5px;
 }
 
 .weather-cards-container {

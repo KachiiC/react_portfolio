@@ -9,7 +9,6 @@ const WeatherContent = () => {
 
     const [showResults, setShowResults] = useState(false)
     const [queryCity, setQueryCity] = useState("")
-    const [weatherCityName, setWeatherCityName] = useState()
     const [weather, setWeather] = useState({
       "city": {
         "name": "",
@@ -44,7 +43,6 @@ const WeatherContent = () => {
         .then(response => response.json())
         .then(weatherData => {
           setWeather(weatherData)
-          setWeatherCityName(weatherData.city["name"])
           setShowResults(true)
         })
         .catch(err => console.log(err))
@@ -78,18 +76,19 @@ const WeatherContent = () => {
         <div className="weather-modal-content">
             <WeatherContentIntroduction />
             <div className="weather-api-component">
-                <h2>Where do you want to check?!</h2>
+                <h2>Which city do you want to check?!</h2>
                 <form onSubmit={getWeather}>
                 <input 
                     id="city" 
                     className="city-search"
+                    placeholder="Please enter a city/town..."
                 />
                 </form>
                 { showResults && (
                     <div className="weather-forecast-results">
-                        <p className="what-is-weather-text">
-                            What is the weather like in... {weatherCityName}?
-                        </p>
+                        <div className="what-is-weather-text">
+                            What is the weather like in... <b>{weather.city["name"]}</b>?
+                        </div>
                         <div className="weather-cards-container">
                         {dayWeather}
                         </div>
