@@ -1,0 +1,32 @@
+.tabs-component-container {
+    width: 600px;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.single-tab {
+    margin: auto;
+    padding: auto;
+    width: 180px;
+    border-right: 1px solid rgb(87, 87, 87) 
+}
+
+.single-tab:last-child {
+    border: none;
+}
+
+.single-tab:hover {
+    cursor: pointer;
+    border-bottom: 2px solid rgb(30, 111, 250);
+}
+
+.tabs-component-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tabs-display-content {
+    border: 1px solid black;
+    padding: 15px;
+    min-height: 300px;
+}
