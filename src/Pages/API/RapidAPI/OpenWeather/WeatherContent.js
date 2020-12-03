@@ -42,8 +42,11 @@ const WeatherContent = () => {
         })
         .then(response => response.json())
         .then(weatherData => {
-          setWeather(weatherData)
-          setShowResults(true)
+          if (weatherData.cod === "200") {
+            setWeather(weatherData)
+            setShowResults(true)
+          } else 
+          setShowResults(false)
         })
         .catch(err => console.log(err))
       }
@@ -72,6 +75,23 @@ const WeatherContent = () => {
 
     })
 
+    const renderResults = (queryCity === "")?(
+      <div></div>
+    ):(
+      showResults ? (
+        <div className="weather-forecast-results">
+            <div className="what-is-weather-text">
+                What is the weather like in... <b>{weather.city["name"]}</b>?
+            </div>
+            <div className="weather-cards-container">
+            {dayWeather}
+            </div>
+        </div>
+      ):(
+        <div>Sorry mate, there's nothing there for this query</div>
+      )
+    )
+
     return (
         <div className="weather-modal-content">
             <WeatherContentIntroduction />
@@ -84,16 +104,7 @@ const WeatherContent = () => {
                     placeholder="Please enter a city/town..."
                 />
                 </form>
-                { showResults && (
-                    <div className="weather-forecast-results">
-                        <div className="what-is-weather-text">
-                            What is the weather like in... <b>{weather.city["name"]}</b>?
-                        </div>
-                        <div className="weather-cards-container">
-                        {dayWeather}
-                        </div>
-                    </div>
-                )}             
+                {renderResults}             
             </div>
       </div>
     );
