@@ -10,7 +10,7 @@ const ComponentContainer = (props) => (
         </p>
         {props.component}
         <h4>So how does it work?</h4>
-        <p>{props.children}</p>
+        <p>{props.description}</p>
     </div>
     
 )
