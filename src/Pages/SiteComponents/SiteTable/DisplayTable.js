@@ -4,12 +4,7 @@ import TableComponent from './TableComponent'
 
 const DisplayTable = () => {
 
-    const tableColumns = [
-        "chinese_characters",
-        "pinyin",
-        "definition",
-        "type"
-    ]
+    const tableColumns = ["chinese_characters", "pinyin", "definition", "type"]
 
     return (
         <TableComponent data={TableData} columns={tableColumns}/>
