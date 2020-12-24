@@ -4,63 +4,57 @@ import NavbarData from 'Data/Navbar/NavBarData'
 import { Link } from 'react-router-dom'
 // CSS
 import "./Navbar.css";
-// Components
-import { CSSTransition } from "react-transition-group";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-const Header = () => {
-  
-  const [isNavVisible, setNavVisibility] = useState(false);
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
+const SiteNavbar = () => {
 
-  useEffect(() => {
-      const mediaQuery = window.matchMedia("(max-width: 700px)");
-      mediaQuery.addListener(handleMediaQueryChange);
-      handleMediaQueryChange(mediaQuery);
+  const [smallMenu, setSmallMenu] = useState(false)
 
-      return () => {
-      mediaQuery.removeListener(handleMediaQueryChange);
-      };
-  }, []);
+  const myFunction = () => {
+    smallMenu === false ? setSmallMenu(true): setSmallMenu(false)
+  }
 
-  const handleMediaQueryChange = mediaQuery => 
-      mediaQuery.matches? setIsSmallScreen(true) : setIsSmallScreen(false); 
+  const displayMenu = NavbarData.map((menu, index) => {
 
-  const toggleNav = () => {
-    setNavVisibility(!isNavVisible);
-  };
+    const displayLink = menu.path.split("-").join(" ")
+    
+    return (
+        <Link to={`/${menu.path}`} className="site-nav-link" key={index}>
+          {displayLink}
+        </Link>
+    )
+  })
 
-  const displayNav = NavbarData.map((menu, index) => {
+  const smallDisplayMenu = NavbarData.map((menu, index) => {
 
-    const displayName = menu.path.split("-").map((letter) => {
-      return letter.toUpperCase()
-    }).join(" ")
+    const displayLink = menu.path.split("-").join(" ")
 
     return (
-      <div className="nav-menu" key={index}>
-        <Link to={`/${menu.path}`} className="nav-links">
-            {displayName}
+        <Link to={`${menu.path}`} className="small-menu-nav" key={index}>
+          {displayLink}
+          <hr className="small-menu-divider"/>
         </Link>
-      </div>
     )
   })
 
   return (
-    <header className="Header">
-      <CSSTransition
-        in={!isSmallScreen || isNavVisible}
-        timeout={350}
-        classNames="NavAnimation"
-        unmountOnExit
-      >
-        <nav className="Nav">
-            {displayNav}
-        </nav>
-      </CSSTransition>
-      <button onClick={toggleNav} className="Burger">
-        X
-      </button>
+    <header>
+      <div className="topnav" id="myTopnav">
+          <div className="icon" onClick={myFunction}>
+            Menu <FontAwesomeIcon icon={faBars} />
+          </div>
+          {displayMenu}
+      </div>
+      { smallMenu && 
+          (
+            <div className="small-menu-block">
+              {smallDisplayMenu}
+            </div>
+          )
+      }
     </header>
   )
 }
 
-export default Header
+export default SiteNavbar
