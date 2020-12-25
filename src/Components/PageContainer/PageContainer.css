@@ -1,16 +1,20 @@
 .main-section {
-    width: 66.6%
-}
-
-.sidebar-section {
-    width: 33.3%;
+    width: 66%;
+    /* border: 1px solid black; */
 }
 
 .main-section p {
-    width: 700px;
+    width: 80%;
     text-align: left;
     margin: 20px auto;
     padding: 10px;
+}
+
+.sidebar-section {
+    width: 32.3%;
+    flex-wrap: wrap;
+    padding: 0px 10px; 
+    /* border: solid 1px black; */
 }
 
 .sidebar-section-single {
@@ -21,6 +25,8 @@
     background-color: black;
     color: white;
     border-radius: 5px;
+    width: 80%;
+    margin: auto;
 }
 
 .sidebar-section-heading h2 {
@@ -36,16 +42,28 @@
 .site-project-item {
     display: flex;
     flex-wrap: wrap;
-    padding: 0px 25px;
+    width: 80%;
     margin: 25px auto;
 }
 
 .site-project-pic {
-    width: 178px;
+    width: 50%;
     height: 100px;
 }
 
 .site-project-title {
     padding: 10px;
     margin: auto;
+}
+
+@media (max-width:1160px) {
+    .main-section {
+        width: 100%
+    }
+    
+    .sidebar-section {
+        width: 60%;
+        text-align: center;
+        margin: auto;
+    }
 }

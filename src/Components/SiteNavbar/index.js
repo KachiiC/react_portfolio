@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 // Data
 import NavbarData from 'Data/Navbar/NavBarData'
 import { Link } from 'react-router-dom'

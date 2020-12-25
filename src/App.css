@@ -2,7 +2,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
-  padding: 55px 80px;
+  padding: 55px 0px;
 }
 
 .component-separator {
