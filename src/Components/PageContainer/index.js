@@ -1,17 +1,19 @@
 import React from 'react'
 // CSS
 import './PageContainer.css'
+// Components
 import SiteSidebar from './SiteSidebar'
-import SiteMainSection from './SiteMainSection'
 
 const PageContainer = (props) => (
 
-    <main>       
-        <SiteMainSection>
-            {props.children}
-        </SiteMainSection>
-        <SiteSidebar />
-    </main>
+    <body>
+        <div className="container">
+            <main>
+                {props.children}
+            </main>
+            <SiteSidebar />
+        </div>
+    </body>
         
 )
 

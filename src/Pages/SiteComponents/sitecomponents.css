@@ -1,8 +1,9 @@
-.page-container {
-    text-align: center;
-    padding: auto 500px;
+.site-components-container {
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
 }
-  
-.page-paragraph {
-    text-align: center;
+
+.site-components-container p {
+    padding: 0px 20px;
 }

@@ -1,7 +1,6 @@
 import React from 'react'
 // CSS
 import './SiteComponents.css'
-import MainContentContainer from 'Components/MainContentContainer'
 // Components
 import SiteComponentsIntroduction from './SiteComponentIntroduction'
 import SiteCard from './SiteCard'
@@ -23,20 +22,21 @@ const SiteComponents = () => {
         SiteGallery
     ]
 
-    const displayedComponents = componentsList.map((component) => (
+    const displayedComponents = componentsList.map((component, index) => (
         <ComponentContainer 
             title={component.title}
             description={component.description}
             component={component.component}
             introduction={component.introduction}
+            key={index}
         />
     ))
     
     return (
-        <MainContentContainer
-            introduction={<SiteComponentsIntroduction />}
-            components={displayedComponents}
-        />
+        <div className="site-components-container">
+            <SiteComponentsIntroduction />
+            {displayedComponents}
+        </div>
     )
 }
 

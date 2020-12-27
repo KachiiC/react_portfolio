@@ -1,44 +1,40 @@
 import React from 'react'
 
 
-const SiteSidebar = () => {
+const SiteSidebar = () => { 
 
-    const project_items = ["Site Modal", "Site Carousel"]
+    const dummyData = ["React Card", "React Modal", "React Slider"]
 
-    const displayProjects = project_items.map((project, index) => {
-
-        return (
-            <div className="site-project-item" key={index}>    
-                <img src="http://via.placeholder.com/178x100.png?text=Me" 
-                    className="site-project-pic" 
-                    alt="profile" 
+    const displayComponentCards = dummyData.map((component, index) => (
+        <div className="sidebar-component-item" key={index}>
+            <div className="sidebar-component-image-container">
+                <img src="http://via.placeholder.com/1780x1000.png?text=Item%201" 
+                    alt="sidebar-component-item-pic"
                 />
-                <h3 className="site-project-title">{project}</h3>
             </div>
-        )
-    })
- 
+            <h3 className="sidebar-component-heading">{component}</h3>
+        </div>
+    ))
 
     return (
-        <div className="sidebar-section">
-            <div className="sidebar-section-heading">
-                <h2>Kachi Cheong</h2>
-            </div>
-            <div className="sidebar-section-single">
-                <h2>React Portfolio</h2>
-                <img src="http://via.placeholder.com/150x150.png?text=Me" 
-                    className="profile-pic" 
-                    alt="profile" 
+        <aside>
+            <div className="sidebar-section">
+                <div className="sidebar-heading">
+                    <h1>Kachii's Portfolio</h1>
+                </div>
+                <img src="http://via.placeholder.com/150x150.png?text=Kachi%20Icon" 
+                    alt="profile_icon"
+                    className="sidebar-profile-icon"
                 />
-                <p>A portfolio of projects using react.</p>
+                <p>A react portfolio built by Kachi Cheong</p>
             </div>
-            <div className="sidebar-section-heading">
-                <h2>Projects</h2>
+            <div className="sidebar-section">
+                <div className="sidebar-heading">
+                    <h1>Components</h1>
+                </div>
+                {displayComponentCards}
             </div>
-            <div className="sidebar-section-single">
-                {displayProjects}
-            </div>
-        </div>
+        </aside>
     )
 }
 

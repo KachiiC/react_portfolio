@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // Data
-import NavbarData from 'Data/Navbar/NavBarData'
+import PageData from 'Data/PageData'
 import { Link } from 'react-router-dom'
 // CSS
 import "./Navbar.css";
@@ -15,7 +15,7 @@ const SiteNavbar = () => {
     smallMenu === false ? setSmallMenu(true): setSmallMenu(false)
   }
 
-  const displayMenu = NavbarData.map((menu, index) => {
+  const displayMenu = PageData.map((menu, index) => {
 
     const displayLink = menu.path.split("-").join(" ")
     
@@ -26,7 +26,7 @@ const SiteNavbar = () => {
     )
   })
 
-  const smallDisplayMenu = NavbarData.map((menu, index) => {
+  const smallDisplayMenu = PageData.map((menu, index) => {
 
     const displayLink = menu.path.split("-").join(" ")
 
