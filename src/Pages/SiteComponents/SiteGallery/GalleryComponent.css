@@ -1,12 +1,13 @@
+.gallery-container {
+    margin: 25px 0px;
+}
+
 .gallery-slide {
     width: 200px;
     height: 113px;
     margin: 0px 10px;
 }
 
-.gallery-container {
-    margin: 25px 0px;
-}
 
 .current-image {
     width: 640px;

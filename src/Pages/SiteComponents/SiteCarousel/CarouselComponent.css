@@ -1,18 +1,31 @@
-.slide-image{
-    width: 200px;
-    height: 113px;
-    padding: 10px;
+.carousel-component-container {
+    width: 90%;
+    margin: auto;
 }
 
-.carousel-container {
-    margin: 25px 0px;
-    display: flex;
-    flex-wrap: wrap;
+.carousel-images-container {
+    margin: 25px auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    width: 100%;
+    
+}
+
+.slide-image-container {
+    grid-column: span 4;
+}
+
+.slide-image {
+    width: 95%;
+    height: 100%;
+    margin: auto;
 }
 
 .toggle-button{
     margin: auto;
     cursor: pointer;
+    grid-column: span 1;
 }
 
 .carousel-form {

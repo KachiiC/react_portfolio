@@ -4,12 +4,13 @@
 }
 
 .gallery-row {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }
 
 .gallery-item {
-    width: 50%;
+    grid-column: span 6;
+    width: 100%;
 }
 
 .modal-button {
@@ -47,4 +48,14 @@
 .close-button{
     cursor: pointer;
     width: 10px;
+}
+
+@media screen and (max-width: 720px) {
+
+    .gallery-item {
+        grid-column: span 12;
+        width: 100%;
+        margin: 20px;
+    }
+
 }

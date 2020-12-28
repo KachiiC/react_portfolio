@@ -27,7 +27,7 @@ const DisplayCarousel = () => {
     },[query])
 
     return (
-        <div>
+        <div className="carousel-component-container">
             <form onSubmit={handleSubmit} className="carousel-form">
                 <input type="text" 
                     className="image-carousel-search" 

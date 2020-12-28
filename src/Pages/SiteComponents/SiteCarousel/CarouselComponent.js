@@ -22,23 +22,26 @@ const CarouselComponent = ({ images }) => {
         const displayIndex = index + imageNumber
 
         return (
+            <div className="slide-image-container">
                 <img src={images[displayIndex]} 
                     alt={index}
                     key={displayIndex}
                     className="slide-image"
-                />
+                    />
+            </div>
         )  
     })
   
     return (
         images.length > 0 && (
-            <div className="carousel-container">
+            <div className="carousel-images-container">
                 <Icon size="2x" name="angle-double-left" 
                     onClick={slideLeft} className="toggle-button"
                 />
                 {displayImages}
                 <Icon size="2x" name="angle-double-right" 
-                    onClick={slideRight} className="toggle-button"/>
+                    onClick={slideRight} className="toggle-button"
+                />
             </div>
         )
     )

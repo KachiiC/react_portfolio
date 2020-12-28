@@ -1,13 +1,17 @@
 .tabs-component-container {
-    width: 600px;
+    width: 80%;
     margin: auto;
     border: 1px solid black;
 }
 
+.tabs-component-row{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
 .single-tab {
-    margin: auto;
-    padding: auto;
-    width: 180px;
+    text-align: center;
+    grid-column: span 4;
     border-right: 1px solid rgb(87, 87, 87) 
 }
 
@@ -20,10 +24,6 @@
     border-bottom: 2px solid rgb(30, 111, 250);
 }
 
-.tabs-component-row{
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .tabs-display-content {
     border: 1px solid black;
