@@ -31,12 +31,14 @@ const GalleryComponent = ({images}) => {
         const displayIndex = imageIndex + imageNumber
 
         return (
-            <img src={images[displayIndex]}
-                key={index} 
-                alt={imageIndex} 
-                className="gallery-slide"
-                onClick={() => setSelectedIndex(displayIndex) }
-            />
+            <div className="gallery-slide-container">
+                <img src={images[displayIndex]}
+                    key={index} 
+                    alt={imageIndex} 
+                    className="gallery-slide"
+                    onClick={() => setSelectedIndex(displayIndex) }
+                />
+            </div>
         )
     })
   
@@ -53,17 +55,17 @@ const GalleryComponent = ({images}) => {
                     className="current-image"
                     onClick={viewImage}
                 />
-                <div className="carousel-container">
+                <div className="gallery-images-container">
                     <Icon size="2x" 
                         name="angle-double-left" 
                         onClick={slideLeft} 
-                        className="toggle-button"
+                        className="gallery-toggle-button"
                     />
                     {displayImages}
                     <Icon size="2x" 
                         name="angle-double-right" 
                         onClick={slideRight} 
-                        className="toggle-button"
+                        className="gallery-toggle-button"
                     />
                 </div>
             </div>

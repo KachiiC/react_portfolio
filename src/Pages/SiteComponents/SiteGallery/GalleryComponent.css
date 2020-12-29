@@ -1,18 +1,37 @@
 .gallery-container {
-    margin: 25px 0px;
+    margin: 25px auto;
+    width: 90%;
+}
+
+.current-image {
+    width: 100%;
+    height: auto;
+    max-width: 83%;
+    max-height: 600px;
+}
+
+.gallery-images-container {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    width: 100%;
+}
+
+.gallery-slide-container {
+    grid-column: span 4;
+}
+
+.gallery-toggle-button {
+    margin: auto 0px;
+    cursor: pointer;
+    grid-column: span 1;
 }
 
 .gallery-slide {
-    width: 200px;
-    height: 113px;
-    margin: 0px 10px;
+    width: 90%;
+    height: 100%;
+    max-height: 120px;
 }
 
-
-.current-image {
-    width: 640px;
-    height: 425px;
-}
 
 .full-screen-image-container {
     display: flex;
@@ -24,7 +43,6 @@
     display: flex;
     flex-wrap: wrap;
 }
-
 
 .close-full-screen{
     color: white;
