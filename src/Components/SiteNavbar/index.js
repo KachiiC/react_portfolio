@@ -31,7 +31,7 @@ const SiteNavbar = () => {
     const displayLink = menu.path.split("-").join(" ")
 
     return (
-        <Link to={`${menu.path}`} className="small-menu-nav" key={index}>
+        <Link to={`/${menu.path}`} className="small-menu-nav" key={index}>
           {displayLink}
           <hr className="small-menu-divider"/>
         </Link>

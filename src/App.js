@@ -5,7 +5,6 @@ import PageData from "Data/PageData";
 // Router
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 // Page Data
-import Home from 'Pages/Home'
 import About from 'Pages/About'
 // Components
 import SiteNavbar from "Components/SiteNavbar";
@@ -25,11 +24,8 @@ const App = () => {
         <PageContainer>
           <Switch>
             {displayPageList}
-            <Route path="/about">
-                <About />
-            </Route>
             <Route path="/">
-                <Home />
+                <About />
             </Route>
           </Switch>
         </PageContainer>
