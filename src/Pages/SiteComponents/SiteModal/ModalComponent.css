@@ -39,6 +39,7 @@
     height: 80%;
     display: grid;
     grid-template-columns: repeat(100, 1fr);
+    min-height: 550px;
 }
 
 .site-modal-content {

@@ -84,7 +84,7 @@ const WeatherContent = () => {
                 What is the weather like in... <b>{weather.city["name"]}</b>?
             </div>
             <div className="weather-cards-container">
-            {dayWeather}
+              {dayWeather}
             </div>
         </div>
       ):(

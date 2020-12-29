@@ -32,20 +32,27 @@
     max-height: 120px;
 }
 
+.full-screen-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
 
 .full-screen-image-container {
-    display: flex;
-    flex-wrap: wrap;
+    margin: auto;
+    width: 80%;
+    grid-column: span 9;
 }
 
 .full-screen-image{
-    margin: 130px auto;
-    display: flex;
-    flex-wrap: wrap;
+    margin: 100px auto;
+    width: 100%;
+    height: auto;
+
 }
 
 .close-full-screen{
+    margin: 100px auto;
     color: white;
     cursor: pointer;
-    margin: 0px 15px;
+    grid-column: span 1;
 }

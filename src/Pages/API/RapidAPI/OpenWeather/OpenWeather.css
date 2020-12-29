@@ -1,23 +1,31 @@
 .weather-modal-content {
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding-top: 50px;
+    max-height: 510px;
+    overflow-y:scroll;
 }
 
-.weather-api-description{
-    width: 445px;
-    word-wrap: break-word;
+.weather-api-description {
+    grid-column: span 6;
+    height: 100%;
 }
 
 .weather-api-component {
-    width: 50%;
+    grid-column: span 6;
+    width: 95%;
     margin: 0px auto;
     padding: 0px 20px;
 }
 
-.weather-api-explanation {
-    padding: 10px 20px;
-    text-align: left;
+.city-search {
+    width: 50%;
+    height: 30px;
+    padding: 0px 10px;
+}
+
+.weather-forecast-results{
+    text-align: center;
 }
 
 .what-is-weather-text{
@@ -27,45 +35,49 @@
 }
 
 .weather-cards-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     flex-wrap: wrap;
     margin: auto;
-    width: 500px;
-}
-
-.city-search {
-    width: 200px;
-    height: 30px;
-    padding: 0px 10px;
-}
-
-.weather-forecast-results{
-    text-align: center;
+    width: 100%;
+    padding-bottom: 15px;
 }
 
 .temprature-card-container {
+    margin: auto;
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    max-width: 150px;
-    margin: 25px auto;
     overflow: hidden;
+    width: 90%;
+    grid-column: span 4;
 }
 
 .temprature-card-image {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
     border-radius: 5px 5px 0 0;
-    width: 150px;
-    height: 100px;
+    width: 100%;
+    height: auto;
+    max-height: 100px;
 }
 
 .temprature-card-description-container {
+    margin: auto;
     max-width: 150px;
-    max-height: 140px;
-    min-height: 150px;
+    min-height: 160px;
     overflow: hidden;
 }
 
-.temprature-card-description-content {
-    text-align: center;
+@media screen and (max-width: 860px) {
+    .weather-modal-content{
+        padding: 10px;
+    }
+    .weather-api-description {
+        grid-column: span 12;
+    }
+    .weather-api-component {
+        width: 90%;
+        grid-column: span 12;
+        border: 1px solid black;
+    }
 }
