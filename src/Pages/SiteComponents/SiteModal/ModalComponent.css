@@ -28,26 +28,31 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.5); 
-    z-index: 999; 
 }
 
-.content {
-    margin: 100px auto;
+.site-modal-screen {
+    margin: auto;
     background-color: white;
-    border-radius: 0.25rem;
-    width: 70%;
+    border-radius: 0.5rem;
+    width: 80%;
     height: 70%;
-    padding: 20px;
-    text-align: center;
-  }
+    display: grid;
+    grid-template-columns: repeat(100, 1fr);
+}
+
+.site-modal-content {
+    grid-column: span 97;
+    width: 100%;
+}
 
 .close-button-container {
-    text-align: right;
+    grid-column: span 3;
+    width:100%;
+    margin: 0px auto;
 }
 
 .close-button{
     cursor: pointer;
-    width: 10px;
 }
 
 @media screen and (max-width: 720px) {

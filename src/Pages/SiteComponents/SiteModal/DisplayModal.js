@@ -31,10 +31,8 @@ const DisplayModal = () => {
         <>
           { showModal && (
             <ModalComponent closeModal={() => setShowModal(false)}>
-              <div className="modal-content">
                 <h3>{result.modal_title}</h3>
                 {result.modal_content}
-              </div>
             </ModalComponent>
           )}
           <div className="site-container">

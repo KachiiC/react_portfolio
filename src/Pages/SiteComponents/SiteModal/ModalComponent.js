@@ -1,6 +1,8 @@
 import React from 'react'
 // CSS
 import './ModalComponent.css'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faTimes } from "@fortawesome/free-solid-svg-icons"
 
 const ModalComponent = (props) => {
 
@@ -8,11 +10,16 @@ const ModalComponent = (props) => {
   
     return (
         <div className="overlay">
-          <div className="content">
-            <div className="close-button-container" onClick={closeModal}>
-              <span className="close-button">X</span>
+          <div className="site-modal-screen">
+            <div className="site-modal-content">
+              {props.children}  
             </div>
-            {props.children}
+            <div className="close-button-container" onClick={closeModal}>                  
+                <FontAwesomeIcon icon={faTimes}
+                  size="lg" 
+                  className="close-button"
+                />
+            </div>
           </div>
         </div>
     );
