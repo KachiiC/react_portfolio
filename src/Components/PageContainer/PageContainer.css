@@ -11,12 +11,14 @@ body {
 
 main {
     grid-column: span 8;
-    width: 100%;
 }
-
 
 aside {
     grid-column: span 4;
+}
+
+main,
+aside {
     width: 100%;
 }
 
@@ -27,13 +29,15 @@ main p {
 aside p {
     text-align: center;
 }
-main p, 
+
+main p,
 aside p {
     width: 85%;
     margin: 25px auto;
 }
 
-.sidebar-section {
+.sidebar-section,
+.sidebar-heading {
     margin: auto;
 }
 
@@ -41,7 +45,6 @@ aside p {
     background-color: black;
     color: white;
     width: 80%;
-    margin: auto;
     border-radius: 5px;
 }
 
@@ -65,12 +68,10 @@ aside p {
     grid-column: span 6;
     margin: auto;
     text-align: center;
-    width: 100%;
 }
 
 .sidebar-component-image-container {
     grid-column: span 6;
-    width: 100%;
 }
 
 .sidebar-component-image-container img {
@@ -78,11 +79,17 @@ aside p {
     width: 178px;
 }
 
+
+.sidebar-component-image-container,
+.sidebar-component-item h3 {
+    width: 100%;
+}
+
 @media screen and (max-width: 1180px) {
     .sidebar-component-item h3 {
         grid-column: span 12;
     }
-    
+
     .sidebar-component-image-container {
         grid-column: span 12;
     }
@@ -90,37 +97,37 @@ aside p {
 
 @media screen and (max-width: 987px) {
     main {
-      grid-column: span 12;
+        grid-column: span 12;
     }
+
     aside {
-      grid-column: span 12;
-      margin: auto;
-      width: 60%;
+        grid-column: span 12;
+        margin: auto;
+        width: 60%;
     }
 
     .sidebar-component-item h3 {
         grid-column: span 6;
     }
-    
+
     .sidebar-component-image-container {
         grid-column: span 6;
     }
 }
 
 @media screen and (max-width: 660px) {
-    main {
-        grid-column: span 12;
-    }
+    main, 
     aside {
         grid-column: span 12;
+    }
+
+    aside {
         width: 80%;
     }
 
-    .sidebar-component-item h3 {
-        grid-column: span 12;
-    }
-    
+    .sidebar-component-item h3,
     .sidebar-component-image-container {
         grid-column: span 12;
     }
+
 }

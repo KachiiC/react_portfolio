@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 // Data
-import PageData from 'Data/PageData'
-import { Link } from 'react-router-dom'
 // CSS
 import "./Navbar.css";
+// Components
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import Navbar from "./NavbarMenus";
+import SmallNavbarMenus from "./SmallNavbarMenus";
 
 const SiteNavbar = () => {
 
@@ -15,47 +16,17 @@ const SiteNavbar = () => {
     smallMenu === false ? setSmallMenu(true): setSmallMenu(false)
   }
 
-  const displayMenu = PageData.map((menu, index) => {
-
-    const displayLink = menu.path.split("-").join(" ")
-    
-    return (
-        <Link to={`/${menu.path}`} className="site-nav-link" key={index}>
-          {displayLink}
-        </Link>
-    )
-  })
-
-  const smallDisplayMenu = PageData.map((menu, index) => {
-
-    const displayLink = menu.path.split("-").join(" ")
-
-    return (
-        <Link to={`/${menu.path}`} 
-          className="small-menu-nav" 
-          key={index}
-        >
-          <div onClick={() => setSmallMenu(false)}>
-            {displayLink}
-          </div>
-          <hr className="small-menu-divider"/>
-        </Link>
-    )
-  })
-
   return (
     <header>
       <div className="topnav" id="myTopnav">
           <div className="icon" onClick={myFunction}>
             Menu <FontAwesomeIcon icon={faBars} />
           </div>
-          {displayMenu}
+          <Navbar />
       </div>
       { smallMenu && 
           (
-            <div className="small-menu-block">
-              {smallDisplayMenu}
-            </div>
+            <SmallNavbarMenus setFunction={() => setSmallMenu(false)} />
           )
       }
     </header>
