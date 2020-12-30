@@ -1,6 +1,5 @@
 import React from 'react'
 // CSS
-import ComponentContainer from 'Components/ComponentContainer'
 import DisplayTabs from './DisplayTabs'
 import './TabsComponent.css'
 

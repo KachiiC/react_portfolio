@@ -7,6 +7,7 @@ const About = () => {
             <h1>About</h1>
             <p>
                 My Name is Kacheok Cheong, and this is a portfolio of my react skills.
+                
             </p>
         </div>
     )

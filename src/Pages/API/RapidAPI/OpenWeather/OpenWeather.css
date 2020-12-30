@@ -78,6 +78,5 @@
     .weather-api-component {
         width: 90%;
         grid-column: span 12;
-        border: 1px solid black;
     }
 }

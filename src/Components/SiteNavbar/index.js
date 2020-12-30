@@ -31,8 +31,13 @@ const SiteNavbar = () => {
     const displayLink = menu.path.split("-").join(" ")
 
     return (
-        <Link to={`/${menu.path}`} className="small-menu-nav" key={index}>
-          {displayLink}
+        <Link to={`/${menu.path}`} 
+          className="small-menu-nav" 
+          key={index}
+        >
+          <div onClick={() => setSmallMenu(false)}>
+            {displayLink}
+          </div>
           <hr className="small-menu-divider"/>
         </Link>
     )
