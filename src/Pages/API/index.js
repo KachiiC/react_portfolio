@@ -10,12 +10,12 @@ import DjangoRFW from './DjangoRFW'
 const API = () =>  {
     
     return (
-        <>
+        <div>
             <ApiIntroduction />
             <GoogleAPI />
             <RapidAPI />
             <DjangoRFW />
-        </>
+        </div>
     )
 }
 

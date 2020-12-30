@@ -3,7 +3,6 @@ import React, {useState, useEffect} from 'react'
 import RapidApiKey from 'Api_key/RapidAPIKey'
 // Components
 import TempratureCard from './TempratureCard'
-import WeatherContentIntroduction from './WeatherContentIntroduction'
 
 const WeatherContent = () => {
 
@@ -93,20 +92,17 @@ const WeatherContent = () => {
     )
 
     return (
-        <div className="weather-modal-content">
-            <WeatherContentIntroduction />
-            <div className="weather-api-component">
-                <h2>Which city do you want to check?!</h2>
-                <form onSubmit={getWeather}>
-                <input 
-                    id="city" 
-                    className="city-search"
-                    placeholder="Please enter a city/town..."
-                />
-                </form>
-                {renderResults}             
-            </div>
-      </div>
+          <div className="weather-api-component">
+              <h2>Which city do you want to check?!</h2>
+              <form onSubmit={getWeather}>
+              <input 
+                  id="city" 
+                  className="city-search"
+                  placeholder="Please enter a city/town..."
+              />
+              </form>
+              {renderResults}             
+          </div>
     );
 
 }

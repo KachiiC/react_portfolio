@@ -11,14 +11,14 @@ const ModalComponent = (props) => {
     return (
         <div className="overlay">
           <div className="site-modal-screen">
-            <div className="site-modal-content">
-              {props.children}  
-            </div>
             <div className="close-button-container" onClick={closeModal}>                  
                 <FontAwesomeIcon icon={faTimes}
                   size="lg" 
                   className="close-button"
                 />
+            </div>
+            <div className="site-modal-content">
+              {props.children}  
             </div>
           </div>
         </div>

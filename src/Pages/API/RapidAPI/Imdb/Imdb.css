@@ -1,3 +1,19 @@
-.imdb-modal {
-    border: 1px solid black;
+.rapid-api-modal-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding-top: 50px;
+    max-height: 510px;
+    overflow-y:scroll;
+}
+
+.rapid-api-description {
+    grid-column: span 6;
+    height: 100%;
+}
+
+.rapid-api-component {
+    grid-column: span 6;
+    width: 95%;
+    margin: 0px auto;
+    padding: 0px 20px;
 }

@@ -1,8 +1,7 @@
 import React from 'react'
 
-const WeatherContentIntroduction = () => (
-
-        <div className="weather-api-description">
+const WeatherIntroduction = () => (
+        <div>
             <h1>Open Weather API</h1>
             <p>
                 A simple weather app built with <b>Open Weather Api</b>.<br/><br/>
@@ -23,4 +22,4 @@ const WeatherContentIntroduction = () => (
 
 )
 
-export default WeatherContentIntroduction
+export default WeatherIntroduction

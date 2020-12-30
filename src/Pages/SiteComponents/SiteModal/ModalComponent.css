@@ -37,19 +37,17 @@
     border-radius: 0.5rem;
     width: 80%;
     height: 80%;
-    display: grid;
-    grid-template-columns: repeat(100, 1fr);
     min-height: 550px;
 }
 
 .site-modal-content {
-    grid-column: span 97;
     width: 100%;
+    height: 100%;
 }
 
 .close-button-container {
-    grid-column: span 3;
-    width:100%;
+    float: right;
+    display: block;
     margin: 0px auto;
 }
 

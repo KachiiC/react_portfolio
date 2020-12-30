@@ -122,12 +122,12 @@ aside p {
     }
 
     aside {
-        width: 80%;
+        width: 100%;
     }
 
     .sidebar-component-item h3,
     .sidebar-component-image-container {
-        grid-column: span 12;
+        grid-column: span 6;
     }
 
 }
