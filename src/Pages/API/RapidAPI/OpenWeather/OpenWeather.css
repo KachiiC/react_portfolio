@@ -6,6 +6,7 @@
 
 .weather-forecast-results{
     text-align: center;
+    border: 1px solid black;
 }
 
 .what-is-weather-text{
