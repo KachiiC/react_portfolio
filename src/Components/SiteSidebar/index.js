@@ -1,5 +1,6 @@
 import React from 'react'
-
+// CSS
+import './Sidebar.css'
 
 const SiteSidebar = () => { 
 
@@ -17,7 +18,7 @@ const SiteSidebar = () => {
     ))
 
     return (
-        <aside>
+        <aside className="site-span-4 w-100">
             <div className="sidebar-section">
                 <div className="sidebar-heading">
                     <h1>Kachii's Portfolio</h1>

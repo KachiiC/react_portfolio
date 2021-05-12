@@ -1,9 +1,9 @@
 import React from "react";
 // CSS
 import "./App.css"
-import PageData from "Data/PageData";
+import PageData from "Data/PagesData";
 // Router
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter , Switch, Route} from "react-router-dom";
 // Page Data
 import About from 'Pages/About'
 // Components
@@ -19,7 +19,7 @@ const App = () => {
   ))
   
   return (
-      <Router>
+      <BrowserRouter>
         <SiteNavbar />
         <PageContainer>
           <Switch>
@@ -29,7 +29,7 @@ const App = () => {
             </Route>
           </Switch>
         </PageContainer>
-      </Router>
+      </BrowserRouter>
   );
 }
 

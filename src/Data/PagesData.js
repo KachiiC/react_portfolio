@@ -6,16 +6,21 @@ import API from 'Pages/API'
 
 const NavbarData = [
     {
-        path: "about",
+        title: "about",
         page: <About />
     },
     {
-        path: "api",
+        title: "api",
         page: <API />
     },
     {
-        path: "site-components",
-        page: <SiteComponents />
+        title: "site-components",
+        page: <SiteComponents />,
+        menu_list: [
+            {
+
+            }
+        ]
     }
 ]
 
