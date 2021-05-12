@@ -8,6 +8,7 @@ const SmallScreenSubList = (props, click) => {
     const [subList, setSubList] = useState(false)
 
     const displaySubList = props.menu_list.map((sub, index) => {
+        
         const displaySub = TitleRender(sub.title)
 
         return (

@@ -1,18 +1,20 @@
 import React from 'react'
+// DATA
+import PagesData from 'Data/PagesData'
 // CSS
 import './SiteNavbar.css'
 import './Responsive.css'
-// Components
+// COMPONENTS
 import MenuLogo from './NavbarComponents/MenuLogo'
 import MenuList from './NavbarComponents/MenuList'
 import SmallMenu from './NavbarComponents/SmallMenu'
 
-const SiteNavbar = () => (
+const SiteNavbar = (props) => (
 
   <nav className="w-100">
-    <MenuLogo />
-    <MenuList />
-    <SmallMenu />
+    <MenuLogo title="React Portfolio"/>
+    <MenuList data={props.data} />
+    <SmallMenu data={props.data}/>
   </nav>
 
 )

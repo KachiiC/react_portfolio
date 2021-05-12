@@ -23,7 +23,7 @@ nav {
     margin: 27px 0px;
 }
 
-.nav-heading a{
+.nav-heading a {
     text-align: center;
     font-weight: 700;
     color: white !important;
@@ -60,11 +60,4 @@ nav {
 .nav-sub-menu h6 {
     cursor: pointer;
     font-weight: 700;
-}
-
-/* SMALL MENU  */
-.small-menu-screen,
-.small-menu-block,
-.small-menu-container {
-    display: none;
 }

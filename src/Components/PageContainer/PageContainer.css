@@ -7,3 +7,10 @@ body {
 main {
     margin: 75px auto 0px;
 }
+
+@media screen and (max-width: 1080px) {
+    .main-container .site-span-8 {
+        grid-column: span 12;
+    }
+
+}
