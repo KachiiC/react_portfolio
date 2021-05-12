@@ -34,7 +34,8 @@ const SiteComponents = () => {
     
     return (
         <div className="site-components-container">
-            <SiteComponentsIntroduction />
+            <h1>Site Components</h1>
+            {SiteComponentsIntroduction}
             {displayedComponents}
         </div>
     )

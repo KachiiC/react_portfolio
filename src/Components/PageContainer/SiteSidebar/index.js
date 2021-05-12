@@ -7,7 +7,7 @@ import SidebarLinksList from './SidebarComponents/SidebarLinksList'
 
 const SiteSidebar = (props) => (
 
-    <aside className="site-span-4 w-90 m-auto">
+    <aside className="site-span-4 w-90">
         <SidebarAbout
             data={props.about_data}
         />

@@ -1,8 +1,10 @@
+.site-table-component {
+    margin: 35px auto;
+}
+
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 65%;
-    margin: auto;
 }
 
 td,

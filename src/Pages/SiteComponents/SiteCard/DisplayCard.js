@@ -2,11 +2,10 @@ import React from 'react'
 // Component
 import CardComponent from './CardComponent'
 // Data
-import CardData from 'Data/SiteComponents/CardData'
 
-const DisplayCard = () => {
+const DisplayCard = (props) => {
 
-    const renderCardList = CardData.map((card, index) => (
+    const renderCardList = props.data.map((card, index) => (
         
         <CardComponent 
             title={card.title}
@@ -18,7 +17,7 @@ const DisplayCard = () => {
     ))
 
     return (
-        <div className="display-card-container">
+        <div className="site-grid-system display-card-container">
             {renderCardList}
         </div>
     )

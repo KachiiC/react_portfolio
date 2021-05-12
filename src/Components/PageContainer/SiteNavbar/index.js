@@ -1,6 +1,4 @@
 import React from 'react'
-// DATA
-import PagesData from 'Data/PagesData'
 // CSS
 import './SiteNavbar.css'
 import './Responsive.css'

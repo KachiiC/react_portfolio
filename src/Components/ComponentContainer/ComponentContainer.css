@@ -1,6 +1,9 @@
 .component-item {
-    width: 100%;
-    margin: auto;
+    margin: 50px auto;
+}
+
+.component-item h2{
+    text-align: center;
 }
 
 .component-separator {

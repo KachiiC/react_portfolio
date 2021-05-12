@@ -1,17 +1,18 @@
 import React from 'react'
 // CSS
 import './PageContainer.css'
-// Components
+// COMPONENTS
 import SiteSidebar from 'Components/PageContainer/SiteSidebar'
+// DATA
 import SidebarData, {SidebarAboutData} from 'Data/SidebarData'
 
 const PageContainer = (props) => (
     
     <main className="site-grid-system main-container">
-        <div className="site-span-8 w-100">
+        <div className="site-span-8 w-90 m-auto">
             {props.children}
         </div>
-        <SiteSidebar 
+        <SiteSidebar
             link_data={SidebarData} 
             about_data={SidebarAboutData}
         />

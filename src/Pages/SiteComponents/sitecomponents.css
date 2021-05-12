@@ -1,7 +1,9 @@
 .site-components-container {
-    width: 100%;
-    display: inline-block;
-    overflow: hidden;
+    text-align: left;
+}
+
+.site-components-container h1 {
+    text-align: center;
 }
 
 .site-components-container p {
