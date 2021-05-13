@@ -1,18 +1,17 @@
 import React from 'react'
-// COMPONENT
-import TableComponent from './TableComponent'
-// DATA
-import TableData from 'Data/SiteComponents/TableData'
-// CSS
+// CSS 
 import './TableComponent.css'
+// COMPONENTS
+import TableHeadings from './TableHeadings'
+import TableRows from './TableRows'
 
-const SiteTable = {
+const SiteTable = (props) => (
 
-    title: "React Table",
-    introduction: "A simple table component built with react. To edit the data simply open the data file located at 'Data/SiteComponents/TableData.js'! to edit each row of data.",
-    component: <TableComponent data={TableData}/>,
-    description: "The component maps over the keys of the first object and returns them as column headers. The components then takes each object in the array and returns each value under the corresponding header. Note: all the objects must have the keys for this table to work."
+    <table className="site-table-component w-70">
+        <TableHeadings data={props.data} />
+        <TableRows data={props.data} />
+    </table>
 
-}
+)
 
 export default SiteTable

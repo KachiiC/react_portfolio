@@ -1,17 +1,64 @@
-import React from 'react'
-// COMPONENTS
-import TabsComponent from './TabsComponent'
+import React, {useState} from 'react'
 // CSS
 import './TabsComponent.css'
-// DATA 
-import TabData from 'Data/SiteComponents/TabData'
+// Components
 
-const SiteTabs = {
+const SiteTabs = (props) => {
+    // Default is first tab
+    const [currentTab, setCurrentTab] = useState(0)
 
-    title: "React Tabs",
-    introduction: "A simple tabs component built with React. Simply click on the tabs to change the displayed content. To edit the data open the file stored in 'Data/SiteComponents/TabData.js'!",
-    component: <TabsComponent tabs={TabData} />,
-    description: "This component takes an array of objects as an arguement. Each object contains 'title' and 'content'. Mapping the array and returning each object gives us a tab for each object. The displayIndex state (with the default set as 0) will detirmine which content is currently being displayed. Only one set of content will be displayed at a time and that content is detirmed by which index in the data array is currently selected.The index is set when a tab is clicked, the  which in turn changes the displayed content."
+    // Tab Properties
+    const tabs = props.tabs
+    const numberOfTabs = props.tabs.length
+    
+    // Tabs border ("yes" if it will overflow)
+    const tabsShadowLogic = () => {
+        if (props.shadow === "yes" ) {
+            return "site-shadow"
+        }
+    }
+
+    // Tabs
+    const displayTabs = tabs.map((tab, index) => {
+        // If selected add border to bottom
+        const borderLogic = () => {
+            if (tabs.indexOf(tab) === currentTab) {
+                return "2px solid rgb(30, 111, 250)"
+            } 
+        }
+
+        // click sets tab to clicked tab
+        const handleDisplayClick = () => setCurrentTab(tabs.indexOf(tab))
+        
+        return (
+            <div key={index}
+                className="site-single-tab site-span-1 cursor-pointer"
+                style={{"borderBottom": borderLogic ()}}
+                onClick={handleDisplayClick}
+            >
+                <h3 className="m-auto">{tab.title}</h3>
+            </div>
+        )
+    })
+
+    // Render Example
+
+    return (
+        <div className={`tabs-container w-90 m-auto ${tabsShadowLogic()} `}>
+            {/* Tabs */}
+            <div className="site-grid site-tabs-row"
+                style={{"gridTemplateColumns": `repeat(${numberOfTabs},1fr)`}}
+            >
+                {displayTabs}
+            </div>
+            {/* Content of Tabs */}
+            <div className="site-tabs-display-content site-overflow"
+                style={{"minHeight": `${props.min_height}px`}}>
+                {tabs[currentTab].content}
+                
+            </div>
+        </div>
+      );
 
 }
 

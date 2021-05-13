@@ -1,12 +1,41 @@
-import React from 'react'
-// Components
-import DisplayModal from './DisplayModal'
+import React, {useState} from 'react'
+// CSS
+import './ModalComponent.css'
+// Data
+import ModalComponent from './ModalComponent';
 
-const SiteModal = {
-      title: "React Modal",
-      introduction: "To use this modal, open the 'Data/SiteComponents/ModalData.js' file Editing the data on this file detirmines which image activates the modal and the contents of the modal.",
-      component: <DisplayModal />,
-      description: "The data in the ModalData file is stored in as an array, so a map function is used to return each of the image urls. The image urls are used to display each of the modal images. Each image is assigned a ‘rename’ and ‘changeVisibility’ function. The ‘rename’ function uses state to assign result to the same properties as the image clicked. The ‘changeVisibility’ function changes the visibility of the the modal. Clicking the ‘X’ when the modal appears closes the modal."
+const SiteModal = (props) => {
+
+    const [showModal, setShowModal] = useState(false);
+    const [result, setResult] = useState([])
+      
+    const ModalItems = props.data.map((item, index) => {
+      
+      const reset = () => setResult(item) 
+      
+        return (
+              <div className="cursor-pointer" 
+                key={index} 
+                onClick={() => {
+                  reset(); 
+                  setShowModal(true)
+                }}
+              >
+                {item.component}
+              </div>
+        )
+      }
+    )
+      
+    return (
+        <>
+          {showModal && (
+            <ModalComponent closeModal={() => setShowModal(false)}>
+              {result.content}
+            </ModalComponent>
+          )}
+          {ModalItems}
+        </>
+    )
 }
-
 export default SiteModal
