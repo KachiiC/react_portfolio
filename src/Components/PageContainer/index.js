@@ -9,7 +9,7 @@ import SidebarData, {SidebarAboutData} from 'Data/SidebarData'
 const PageContainer = (props) => (
     
     <main className="site-grid-system main-container">
-        <div className="site-span-8 w-90 m-auto">
+        <div className="site-span-8 w-90 main-section">
             {props.children}
         </div>
         <SiteSidebar

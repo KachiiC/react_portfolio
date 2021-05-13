@@ -7,17 +7,14 @@ import GoogleAPI from './GoogleAPI'
 import RapidAPI from './RapidAPI'
 import DjangoRFW from './DjangoRFW'
 
-const API = () =>  {
-    
-    return (
-        <div>
-            <ApiIntroduction />
-            <GoogleAPI />
-            <RapidAPI />
-            <DjangoRFW />
-        </div>
-    )
-}
+const API = (
+    <>
+        {ApiIntroduction}
+        {/* <GoogleAPI />
+        <RapidAPI />
+        <DjangoRFW /> */}
+    </>
+)
 
 
 

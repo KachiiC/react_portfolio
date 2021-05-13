@@ -18,6 +18,10 @@ nav {
     color: white !important;
 }
 
+.nav-logo a {
+    text-decoration: none;
+}
+
 /* MENU LIST */
 .nav-menu-list {
     margin: 27px 0px;

@@ -11,7 +11,7 @@ const NavbarData = [
     },
     {
         title: "api",
-        page: <API />
+        page: API
     },
     {
         title: "site-components",
