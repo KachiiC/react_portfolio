@@ -12,11 +12,21 @@ import PageContainer from 'Components/PageContainer'
 
 const App = () => {
 
-  const displayPageList = PageData.map((menu, index) => (
-    <Route path={`/react_portfolio/${menu.title}`} key={index}>
-        {menu.page}
-    </Route>
-  ))
+  const displayPageList = PageData.map((menu, index) => {
+    return 'page' in menu ? (
+      <Route path={`/react_portfolio/${menu.title}`} key={index}>
+          {menu.page}
+      </Route>
+    )
+    : (
+      menu.menu_list.map((sub_menu) => (
+        <Route path={`/react_portfolio/${sub_menu.title}`} key={index}>
+          {sub_menu.page}
+        </Route>
+      ))
+    )
+
+  })
   
   return (
     <BrowserRouter>

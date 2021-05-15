@@ -1,15 +1,18 @@
 export const SidebarLinkData = [
     {
-        title:"React Card",
-        image: `http://via.placeholder.com/1780x1000.png?text=ReactCard`
+        title:"Basically MMA",
+        image: `http://via.placeholder.com/1780x1000.png?text=ReactCard`,
+        link: "https://kachiic.github.io/basically_mma/"
     }, 
     {
-        title: "React Modal",
-        image: `http://via.placeholder.com/1780x1000.png?text=ReactModal`
+        title: "Kachii's Rest",
+        image: `http://via.placeholder.com/1780x1000.png?text=Kachii's Rest`,
+        link: "http://kachiis-rest.herokuapp.com/"
     },
     {    
-        title: "React Slider",
-        image: `http://via.placeholder.com/1780x1000.png?text=ReactSlider`
+        title: "Snuggle Bunny",
+        image: `http://via.placeholder.com/1780x1000.png?text=SnuggleBunny`,
+        link: "https://www.snugglebunnyclothing.com/"
     }
 ]
 

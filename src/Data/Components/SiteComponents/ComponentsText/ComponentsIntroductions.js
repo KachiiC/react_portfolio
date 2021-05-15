@@ -12,13 +12,6 @@ export const SiteTablesIntroduction = (
     </p>
 )
 
-export const SiteTimelineIntroduction = (
-    <p>
-        A simple timeline component built with react. To edit the data simply open the data file located at 
-        'Data/SiteComponents/TimelineData.js'! to edit each event in the timeline.
-    </p>
-)
-
 export const SiteTabsIntroduction = (
     <p>
         A simple tabs component built with React. Simply click on the tabs to change the displayed content. 

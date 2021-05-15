@@ -4,7 +4,7 @@ import './ComponentContainer.css'
 
 const ComponentContainer = (props) => (
 
-    <div className="component-item w-90">
+    <div className="component-item w-100">
         <h2>{props.title}</h2>
         <p>{props.introduction}</p>
         {props.component}

@@ -14,11 +14,12 @@ const NavbarData = [
         page: API
     },
     {
-        title: "site-components",
-        page: <SiteComponents />,
+        title: "components",
+        sub_menu: true,
         menu_list: [
             {
-
+                title: "site-components",
+                page: <SiteComponents />
             }
         ]
     }

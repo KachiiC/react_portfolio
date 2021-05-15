@@ -9,13 +9,14 @@ const SidebarLinksList = (props) => {
                 key={index}
                 title={component.title}
                 image={component.image}
+                link={component.link}
             />
         )
     )
 
     return (
         <>
-            <SidebarHeading title="Components" />
+            <SidebarHeading title="Projects" />
             {displayComponentCards}
         </>
     )

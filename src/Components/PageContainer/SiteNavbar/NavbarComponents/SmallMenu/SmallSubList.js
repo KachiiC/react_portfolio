@@ -12,7 +12,7 @@ const SmallScreenSubList = (props, click) => {
         const displaySub = TitleRender(sub.title)
 
         return (
-            <Link to={`/basically_mma/${sub.title}`} 
+            <Link to={`/react_portfolio/${sub.title}`} 
                 onClick={click}
             >
                 <h5>{displaySub}</h5>
