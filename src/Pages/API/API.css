@@ -1,3 +1,16 @@
-.youtube-container{
-    padding: 0px 60px;
+.api-container {
+    margin: 30px auto;
+}
+
+.api-container h1 {
+    text-align: center;
+    margin: 0px auto 35px;
+}
+
+.api-container p {
+    text-align: left;
+}
+
+.api-section {
+    margin-bottom: 50px;
 }

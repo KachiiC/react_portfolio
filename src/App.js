@@ -35,7 +35,7 @@ const App = () => {
         <Switch>
           {displayPageList}
           <Route path="/">
-              <About />
+              {About}
           </Route>
         </Switch>
       </PageContainer>

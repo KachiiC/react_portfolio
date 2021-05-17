@@ -16,9 +16,9 @@ export const SiteTableDescription = (
     </p>
 )
 
-export const SiteTimelineDescription = (
+export const SiteCarouselDescription = (
     <p>
-        Site Timeline description
+        Site Carousel description
     </p>
 )
 

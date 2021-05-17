@@ -1,8 +1,9 @@
 import React from 'react'
 
 const ApiIntroduction = (
-    <div>
-        <h1>React APIs</h1>
+
+    <div className="api-section">
+        <h1 className="text-center">React APIs</h1>
         <p>
             React is so a great framework for dynamically displaying data, the best part is, 
             the data doesn’t even have to be yours! There are several services online which 

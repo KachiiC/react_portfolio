@@ -25,3 +25,11 @@ export const SiteModalIntroduction = (
         detirmines which image activates the modal and the contents of the modal.
     </p>
 )
+
+
+export const SiteCarouselIntroduction = (
+    <p>
+        To use this carousel, open the 'Data/SiteComponents/CarouselData.js' file Editing the data on this file 
+        detirmines which image activates the carousel and the contents of the carousel.
+    </p>
+)

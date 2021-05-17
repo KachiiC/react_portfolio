@@ -7,7 +7,7 @@ import API from 'Pages/API'
 const NavbarData = [
     {
         title: "about",
-        page: <About />
+        page: About
     },
     {
         title: "api",
@@ -20,7 +20,11 @@ const NavbarData = [
             {
                 title: "site-components",
                 page: <SiteComponents />
-            }
+            },
+            {
+                title: "component-libraries",
+                page: <SiteComponents />
+            },
         ]
     }
 ]

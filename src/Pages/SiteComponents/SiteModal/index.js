@@ -14,15 +14,15 @@ const SiteModal = (props) => {
       const reset = () => setResult(item) 
       
         return (
-              <div className="cursor-pointer" 
-                key={index} 
-                onClick={() => {
-                  reset(); 
-                  setShowModal(true)
-                }}
-              >
-                {item.component}
-              </div>
+          <div className="cursor-pointer" 
+            key={index} 
+            onClick={() => {
+              reset(); 
+              setShowModal(true)
+            }}
+          >
+            {item.component}
+          </div>
         )
       }
     )
