@@ -1,9 +1,9 @@
 // COMPONENTS
-import SiteCard from 'Pages/SiteComponents/SiteCard'
-import SiteModal from 'Pages/SiteComponents/SiteModal'
-import SiteTable from 'Pages/SiteComponents/SiteTable'
-import SiteTabs from 'Pages/SiteComponents/SiteTabs'
-import SiteCarousel from 'Pages/SiteComponents/SiteCarousel'
+import SiteCard from 'Pages/Components/SiteComponents/SiteCard'
+import SiteModal from 'Pages/Components/SiteComponents/SiteModal'
+import SiteTable from 'Pages/Components/SiteComponents/SiteTable'
+import SiteTabs from 'Pages/Components/SiteComponents/SiteTabs'
+import SiteCarousel from 'Pages/Components/SiteComponents/SiteCarousel'
 // DATA
 import CarouselData from './ComponentsData/CarouselData'
 import CardData from './ComponentsData/CardData'

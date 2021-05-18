@@ -4,12 +4,12 @@ import './ComponentContainer.css'
 
 const ComponentContainer = (props) => (
 
-    <div className="component-item w-100">
+    <div className="component-item w-90">
         <h2>{props.title}</h2>
-        <p>{props.introduction}</p>
+        {props.introduction}
         {props.component}
         <h4 className="text-center">So how does it work?</h4>
-        <p>{props.description}</p>
+        {props.description}
     </div>
     
 )

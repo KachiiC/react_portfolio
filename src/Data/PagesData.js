@@ -1,8 +1,9 @@
 import React from 'react'
 // Pages
 import About from 'Pages/About'
-import SiteComponents from 'Pages/SiteComponents'
+import SiteComponents from 'Pages/Components/SiteComponents'
 import API from 'Pages/API'
+import ComponentLibraries from 'Pages/Components/ComponentLibraries'
 
 const NavbarData = [
     {
@@ -23,7 +24,7 @@ const NavbarData = [
             },
             {
                 title: "component-libraries",
-                page: <SiteComponents />
+                page: <ComponentLibraries />
             },
         ]
     }

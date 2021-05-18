@@ -1,5 +1,6 @@
 .display-card-container {
     margin: 35px auto;
+    width: 100%;
 }
 
 .card-component-container {

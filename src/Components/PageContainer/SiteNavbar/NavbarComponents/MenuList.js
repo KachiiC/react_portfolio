@@ -9,7 +9,7 @@ const MenuList = (props) => {
     const Menu = props.data.map((menu, index) => {
 
         const regular_menu = (
-            <Link to={`/react_portfolio/${menu.title}`}>
+            <Link to={`/react_portfolio/${menu.title}`} key={index}>
                 {TitleRender(menu.title)}
             </Link>
         )

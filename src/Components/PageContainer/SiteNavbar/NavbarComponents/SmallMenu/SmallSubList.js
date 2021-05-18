@@ -14,6 +14,7 @@ const SmallScreenSubList = (props, click) => {
         return (
             <Link to={`/react_portfolio/${sub.title}`} 
                 onClick={click}
+                key={index}
             >
                 <h5>{displaySub}</h5>
             </Link>

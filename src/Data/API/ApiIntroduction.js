@@ -1,6 +1,6 @@
 import React from 'react'
 
-const GoogleAPIIntroduction = (
+export const GoogleAPIIntroduction = (
     <>
         <p>
             Google have a number of APIs that developers can use, although not all of them 
@@ -12,5 +12,3 @@ const GoogleAPIIntroduction = (
         </p>
     </>
 )
-
-export default GoogleAPIIntroduction

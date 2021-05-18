@@ -2,7 +2,7 @@ import React from 'react'
 
 const SiteComponentIntroduction = (
     
-    <div className="w-90 m-auto">
+    <div className="w-90 m-auto component-item">
         <p>Using just HTML, CSS and JS is fine if you are making an app that will never change. 
             However, modern apps constantly update its content and limiting yourself to HTML, CSS 
             and JS would mean a developer will have need hard code any changes every time they want 
