@@ -12,11 +12,21 @@ const TableSingleRow = (props) => {
 
     // Index (used to define each row)
     const index = props.index
+    
     // grabs all value 
-    const rowContent = Object.values(props.row)
+    const rowLogic = () => {
+        if ('content' in props.row) {
+            delete props.row.content
+            return props.row
+        }
+        return props.row
+    }
+    
+    const rowContent = Object.values(rowLogic())
 
     // By default rows are closed and content is hidden
     const [open, setOpen] = useState(false)
+
     // When clicked open Logic with toggle 
     const openLogic = () => setOpen(!open)
 
@@ -26,21 +36,27 @@ const TableSingleRow = (props) => {
                 {attribute}
             </TableCell>
         )
-    // cropped based on table columns
-    ).slice(0, props.table_columns)
+    )
+
+    const arrowLogic = open ? 
+        <KeyboardArrowDownIcon /> 
+        : 
+        <ChevronRightIcon />
 
     return (
         <>
             <TableRow>
                 <TableCell>
-                    <IconButton 
-                        key={index} 
-                        aria-label="expand row" 
-                        size="small" 
-                        onClick={openLogic}
-                    >
-                    {open ? <KeyboardArrowDownIcon /> : <ChevronRightIcon />}
-                    </IconButton>
+                    {props.content && (
+                        <IconButton 
+                            key={index} 
+                            aria-label="expand row" 
+                            size="small" 
+                            onClick={openLogic}
+                        >
+                        {arrowLogic}
+                        </IconButton>
+                    )}
                 </TableCell>
                 {displayedTableCells}
             </TableRow>

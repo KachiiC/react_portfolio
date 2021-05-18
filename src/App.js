@@ -1,12 +1,13 @@
 import React from "react";
 // CSS
 import "./App.css"
-import PageData from "Data/PagesData";
-// Router
+import 'antd/dist/antd.css'
+// ROUTER
 import { BrowserRouter , Switch, Route} from "react-router-dom";
-// Page Data
+// DATA
+import PageData from "Data/PagesData";
 import About from 'Pages/About'
-// Components
+// COMPONENTS
 import SiteNavbar from "Components/PageContainer/SiteNavbar";
 import PageContainer from 'Components/PageContainer'
 

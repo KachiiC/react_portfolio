@@ -17,12 +17,10 @@ const MaterialUITable = (props) => (
                 {/* TABLE HEADINGS */}
                 <TableHeadings 
                     data={props.data} 
-                    table_columns={props.table_columns} 
                 />
                 {/* TABLE Contents */}
                 <TableContents 
                     data={props.data} 
-                    table_columns={props.table_columns} 
                 />
             </Table>
         </TableContainer>

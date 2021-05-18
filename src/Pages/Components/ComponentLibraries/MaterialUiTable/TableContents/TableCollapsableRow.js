@@ -15,7 +15,9 @@ const CollapseSectionDropdown = (props) => (
     <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
             <Collapse in={props.open} timeout="auto" unmountOnExit>
-                {props.content}
+                <div className="material-ui-content-container">
+                    {props.content}
+                </div>
             </Collapse>
         </TableCell>
     </TableRow>
