@@ -1,7 +1,7 @@
 import React from "react";
 // CSS
 import "./App.css"
-import 'antd/dist/antd.css'
+// import 'antd/dist/antd.css'
 // ROUTER
 import { BrowserRouter , Switch, Route} from "react-router-dom";
 // DATA

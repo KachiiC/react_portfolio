@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 // Components
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
@@ -9,20 +9,8 @@ import TableCollapsableRow from './TableCollapsableRow';
 
 
 const TableSingleRow = (props) => {
-
-    // Index (used to define each row)
-    const index = props.index
     
-    // grabs all value 
-    const rowLogic = () => {
-        if ('content' in props.row) {
-            delete props.row.content
-            return props.row
-        }
-        return props.row
-    }
-    
-    const rowContent = Object.values(rowLogic())
+    const rowContent = Object.values(props.row)
 
     // By default rows are closed and content is hidden
     const [open, setOpen] = useState(false)
@@ -32,7 +20,7 @@ const TableSingleRow = (props) => {
 
     // Returns a table cell for each value in object until cropped
     const displayedTableCells = rowContent.map((attribute, index) => (
-            <TableCell align="justify" key={index}>
+            <TableCell align="center" key={index}>
                 {attribute}
             </TableCell>
         )
@@ -43,20 +31,27 @@ const TableSingleRow = (props) => {
         : 
         <ChevronRightIcon />
 
+
+    const dropDownLogic = () => {
+        if (props.content) {
+            return (
+                <IconButton 
+                    key={props.index} 
+                    aria-label="expand row" 
+                    size="small" 
+                    onClick={openLogic}
+                >
+                    {arrowLogic}
+                </IconButton>
+            )
+        }
+    }
+
     return (
         <>
             <TableRow>
                 <TableCell>
-                    {props.content && (
-                        <IconButton 
-                            key={index} 
-                            aria-label="expand row" 
-                            size="small" 
-                            onClick={openLogic}
-                        >
-                        {arrowLogic}
-                        </IconButton>
-                    )}
+                    {dropDownLogic()}
                 </TableCell>
                 {displayedTableCells}
             </TableRow>

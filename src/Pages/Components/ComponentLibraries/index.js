@@ -8,6 +8,7 @@ const ComponentLibraries = () => {
     return (
         <>
             <h1>Component Libraries</h1>
+            <h2>Material UI Table</h2>
             <MaterialUiTable 
                 data={MaterialUiTableData}
             />

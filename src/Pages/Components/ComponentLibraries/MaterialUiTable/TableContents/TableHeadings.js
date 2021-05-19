@@ -12,7 +12,7 @@ const TableHeadings = (props) => {
     // Renders the keys for each object 
     const renderHeadings = table_headings.map(
         (heading, index) => (
-            <TableCell align="inherit" key={index}>
+            <TableCell align="center" key={index}>
                 <b className="material-table-heading">{heading}</b>
             </TableCell>
         )
