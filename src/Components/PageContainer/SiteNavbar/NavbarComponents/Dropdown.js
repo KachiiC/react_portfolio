@@ -10,8 +10,8 @@ const DropdownList = (props) => {
         const displayTitle = TitleRender(sub.title)
 
         return (
-            <Link to={`/react_portfolio/${sub.title}`}>
-                <h6 key={index}>{displayTitle}</h6>
+            <Link to={`/react_portfolio/${sub.title}`} key={index}>
+                <h6>{displayTitle}</h6>
             </Link>
         )
     })

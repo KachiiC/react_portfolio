@@ -9,16 +9,15 @@ import SiteComponentsList from 'Data/Components/SiteComponents/'
 const SiteComponents = () => {
 
     const displayedComponents = SiteComponentsList.map((component, index) => (
-        <>
+        <div key={index}>
             <ComponentContainer 
                 title={component.title}
                 description={component.description}
                 component={component.component}
                 introduction={component.introduction}
-                key={index}
             />
             <hr />
-        </>
+        </div>
     ))
     
     return (

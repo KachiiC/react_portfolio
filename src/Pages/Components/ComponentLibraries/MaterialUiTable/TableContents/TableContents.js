@@ -6,7 +6,6 @@ import TableSingleRow from './TableSingleRow'
 
 const TableContentRow = (props) => {
 
-
     // Takes Data and renders a single row for each
     const renderDataList = props.data.map((row, index) => {
 

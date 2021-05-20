@@ -4,7 +4,7 @@ import './SiteCarousel.css'
 // COMPONENTS
 import VideoCarousel from './Components/VideoCarousel'
 
-const SiteVideoCarousel = (props) => {
+const SiteCarousel = (props) => {
 
     const [selectedImage, setSelectedImage] = useState(0)
 
@@ -21,9 +21,8 @@ const SiteVideoCarousel = (props) => {
         const handleChange = () => setSelectedImage(props.data.indexOf(image))
 
         return (
-            <div className="site-span-1 site-border-white cursor-pointer">
+            <div className="site-span-1 site-border-white cursor-pointer" key={index}>
                 <img className="site-responsive-image site-border-white"
-                    key={index}
                     src={image.image} 
                     alt={image.title} 
                     onClick={handleChange}
@@ -55,4 +54,4 @@ const SiteVideoCarousel = (props) => {
     )
 }
 
-export default SiteVideoCarousel
+export default SiteCarousel
