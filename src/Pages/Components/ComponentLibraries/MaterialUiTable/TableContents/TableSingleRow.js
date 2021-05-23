@@ -10,7 +10,7 @@ import TableCollapsableRow from './TableCollapsableRow';
 
 const TableSingleRow = (props) => {
     
-    const rowContent = Object.values(props.row)
+    const rowContent = Object.keys(props.row).filter(heading => heading !== "content")
 
     // By default rows are closed and content is hidden
     const [open, setOpen] = useState(false)
@@ -21,7 +21,7 @@ const TableSingleRow = (props) => {
     // Returns a table cell for each value in object until cropped
     const displayedTableCells = rowContent.map((attribute, index) => (
             <TableCell align="center" key={index}>
-                {attribute}
+                {props.row[attribute]}
             </TableCell>
         )
     )
